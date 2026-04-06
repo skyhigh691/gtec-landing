@@ -1,0 +1,330 @@
+
+/****** Responsive ******/
+
+ @media (max-width:1920px) {
+        
+        .manPiccc{
+            width:30%;
+        }
+        
+        
+ }
+
+ @media (max-width:1550px) {
+        
+ }
+
+ @media (max-width:1440px) {
+        
+ }
+
+ @media (max-width:1399px) {
+         .manPiccc{
+            width:35%;
+        }
+ }
+
+ @media (max-width:1199px) {
+         .manPiccc{
+            width:42%;
+            left: 28%;
+        }
+        .chosBtn_dv button{
+            width:50% ;
+        }
+        .chosRow_1 p {
+    font-size: 16px;
+}
+.chosRow_1 {
+    padding-top: 95px;
+        padding-left: 11.01%;
+}
+ }
+
+ @media (max-width:1024px) {
+        .chosHead{
+                top: 2%;
+        }
+        
+        .chosHead h2 {
+    text-align: center;
+    font-size: 30px;
+        }
+        .chosRow_1 {
+         padding-top: 70px;
+        padding-left: 4.3%;
+}
+
+ .bkHead h2::after, .bkHead h2::before{
+        display:none;
+    }
+  
+    
+  
+    .bkIconnn{
+            top: -30%;
+    }
+    
+    .bkColl h4{
+        font-size: 20px;
+    }
+
+
+ }
+
+
+
+
+ @media (max-width:991px) {
+     
+     .logAnch {
+    width: 30%;
+     }
+     
+     
+        .topHEad_txxt p{
+            font-size:14px;
+        }
+        
+        .topHEad_txxt {
+    width: 30%;
+}
+
+.safe_divvv {
+    width: 17%;
+    justify-content: end;
+    gap: 5%;
+}
+
+.gasSafeDV, .whatsSafeDV {
+    width: 50%;
+}
+
+.numTop{
+        width: 30%;
+}
+.numTop a{
+        font-size: 15px !important;
+}
+
+
+
+
+.bannRow_1 {
+    padding-bottom: 35px;
+}
+.bannRow_1 h1{
+    text-align:center;
+}
+.bannRow_1 ul li{
+    text-align:center;
+}
+   .bannRow_1 ul li span{
+       display:none;
+   }
+   .numBTn{
+       display:block;
+       margin:auto;
+   }
+       .manPiccc {
+        width: 42%;
+        left: 28%;
+        position: inherit;
+        bottom: inherit;
+        display:none;
+    }
+    .bannRow_2{
+        padding-bottom:50px;
+    }
+    
+   .expCardd {
+    margin-bottom: 30px;
+}
+    
+    .bkIconnn {
+    border: 2px solid #ec6425;
+    background: white;
+    transform: inherit !important;
+    left: inherit !important;
+    top: inherit !important;
+    position: inherit !important;
+    /* margin: auto; */
+}
+    .bkColl{
+        padding-top:0 !important;
+    }
+    
+    .bookRoww{
+        padding-top:50px;
+    }
+    
+    .expCardd h5{
+        text-align:center;
+    }
+    
+    .expCardd p{
+        text-align:center;
+    }
+    
+    .expCardd button{
+        /*text-align:center;*/
+        margin:auto;
+        display:block;
+    }
+    
+    
+    .chosHead {
+    position: inherit;
+    width: 50%;
+    padding: 5px;
+    transform: inherit;
+    left: 50%;
+    top: 5%;
+    padding: 5px;
+    background: white;
+    margin: auto;
+}
+    
+        .chosRow_1 {
+        text-align: center;
+    }
+    .chosRow_1 h2 {
+    font-size: 35px;
+    margin-bottom: 40px;
+    max-width:inherit !important;
+    }
+        .chosRow_1 {
+        /*text-align: center;*/
+        padding-bottom: 50px;
+    }
+    
+    .bkHead_1 {
+    margin-top: 30px;
+    }
+    
+    .logAnch_lsst img{
+        width:100%;
+    }
+    
+    .logAnch_lsst {
+            width: 50%;
+    display: block;
+    margin: auto;
+    }
+    
+    .lasttt p {
+        text-align: center;
+        margin-top: 15px;
+}
+
+.lastt_socc{
+    justify-content:center !important;
+}
+    .footLAst div{
+        flex-direction:column !important;
+        gap: 0 !important;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+ }
+ 
+ 
+  @media (max-width:767px) {
+              .logAnch {
+        width: 25%;
+        
+    }
+        .numTop a {
+        font-size: 14px !important;
+    }
+    .safe_divvv {
+        width: 15%;
+        justify-content: end;
+        gap: 0%;
+    }
+         .topHEad_txxt p {
+        font-size: 10px;
+    }
+    .chosHead{
+        width:100%;
+    }
+.bkColl h4 {
+    color: white;
+    max-width: inherit;
+ 
+ 
+}
+.bookRoww{
+    margin-top:0 !important;
+}
+
+
+        
+ }
+
+
+ @media (max-width:575px) {
+     .logAnch{
+         padding:0 !important;
+     }
+     .topHEad {
+    /*background: white;*/
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+ }
+ @media (max-width:480px) {
+      .chosBtn_dv button{
+        font-size:16px;
+    }
+    
+ }
+ @media (max-width:440px) {
+     
+            .gasSafeDV, .whatsSafeDV {
+        width: 50%;
+    }
+    .bkVisit{
+        width:90%;
+    }
+    .numBTn{
+        width:60%;
+    }
+    
+    .bkIconnn {
+            width: 200px !important;
+    height: 200px !important;
+    }
+        .bkColl h4 {
+        font-size: 25px;
+    }
+   
+    .chosBtn_dv{
+        flex-direction:column;
+        align-items:center;
+        row-gap:10px;
+    }
+      .chosBtn_dv button{
+        font-size:16px;
+        width:90%;
+    }
+    
+    
+ }
+
+    
+

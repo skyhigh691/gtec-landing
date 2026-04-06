@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>G-Tec Section</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+        integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- owl min css -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- owl theme default -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./assets/style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/responsive.css" />
+
+    <style>
+ .map-container {
+    position: relative;
+}
+
+.map-container img {
+    width: 100%;
+}
+
+/* Map Pins */
+.map-pin {
+    position: absolute;
+    transform: translate(-50%, -100%);
+    text-align: center;
+}
+
+.map-pin i {
+    font-size: 22px;
+    color: #ec6425;
+    display: block;
+}
+
+.map-pin span {
+    background: #fff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* Area list */
+.area-list li {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.area-list i {
+    color: #ec6425;
+    margin-right: 8px;
+}
+        .bann_sec h1 {
+            font-size: 2.7rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .glass-bg {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 16px;
+            padding: 30px;
+        }
+        .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #FF5722;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #e64a19; /* slightly darker shade */
+  transform: translateY(-2px);
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
+
+.map-container {
+  position: relative;
+}
+
+.map-pin {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  text-align: center;
+  cursor: pointer;
+  animation: float 3s ease-in-out infinite;
+}
+
+.map-pin i {
+  color: #FF5722;
+  font-size: 22px;
+  animation: pulse 1.5s infinite;
+}
+
+/* Label styling */
+.map-pin span {
+  display: block;
+  background: #fff;
+  color: #333;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 20px;
+  margin-top: 5px;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.3s ease;
+}
+
+/* Show label on hover */
+.map-pin span {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: #fff;
+  color: #333;
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.map-pin:hover span {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.map-pin span::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translate(-50%, -100%) translateY(0); }
+  50% { transform: translate(-50%, -100%) translateY(-6px); }
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* SECTION */
+.areas-covered {
+  overflow: hidden;
+}
+
+/* MAP */
+.map-container {
+  position: relative;
+}
+
+.map-container img {
+  border-radius: 10px;
+}
+
+/* 🎯 MAP PINS UPDATED */
+
+/* 🎯 INDIVIDUAL POSITION FIXES */
+
+/* Manchester */
+.pin1 span {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Prestwich */
+.pin2 span {
+  left: 0;
+  transform: translateX(-20%);
+}
+
+/* Whitefield */
+.pin3 span {
+  left: 100%;
+  transform: translateX(-80%);
+}
+
+/* Salford */
+.pin4 span {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Broughton Park */
+.pin5 span {
+  left: 100%;
+  transform: translateX(-70%);
+}
+
+/* Crumpsall */
+.pin6 span {
+  left: 0;
+  transform: translateX(-10%);
+}
+/* 🎯 INDIVIDUAL POSITION FIXES REMOVED - COORDINATES UPDATED IN HTML */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+/* OPTIONAL: Fine tuning sizes */
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.3rem; }
+h5 { font-size: 1.1rem; }
+h6 { font-size: 1rem; }
+
+.brands-section1 {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.brands-wrapper1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.section-heading1 {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.accent-border1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: linear-gradient(to bottom, #f86300, #4e2503);
+}
+
+.gradient-text1 {
+    background: linear-gradient(45deg, #0d6efd, #00b4ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+}
+
+.brands-subtext1 {
+    color: #495057;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.brand-grid1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+    width: 1300px;
+}
+
+.brand-card1 {
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.brand-card1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(13, 110, 253, 0.15);
+}
+
+.brand-logo1 {
+    width: 100%;
+    height: auto;
+
+    transition: filter 0.3s ease;
+}
+
+.brand-card1:hover .brand-logo1 {
+    filter: grayscale(0);
+}
+
+@media (min-width: 768px) {
+    .brands-wrapper1 {
+        grid-template-columns: 1fr 1.2fr;
+        align-items: center;
+    }
+
+    .section-heading1 {
+        padding-left: 2rem;
+        margin-bottom: 0;
+    }
+}
+
+/**** Brands*****/
+
+.brands-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.brands-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.section-heading {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.accent-border {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: linear-gradient(to bottom, #f86300, #4e2503);
+}
+
+.gradient-text {
+    background: linear-gradient(45deg, #0d6efd, #00b4ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+}
+
+.brands-subtext {
+    color: #495057;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.brand-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+    width: 1200px;
+}
+
+.brand-card {
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.brand-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(13, 110, 253, 0.15);
+}
+
+.brand-logo {
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.brand-card:hover .brand-logo {
+    filter: grayscale(0);
+}
+
+@media (min-width: 768px) {
+    .brands-wrapper {
+        grid-template-columns: 1fr 1.2fr;
+        align-items: center;
+    }
+
+    .section-heading {
+        padding-left: 2rem;
+        margin-bottom: 0;
+    }
+}
+
+    </style>
+</head>
+
+<body class="">
+    <header class="topHEad py-2">
+        <div class="container d-flex justify-content-end align-items-center position-relative gap-lg-4">
+            <a href="" class="logAnch"><img src="images/logo (2).png" alt="G-TEC Logo" class="h-14" /></a>
+            <div class="topHEad_txxt">
+                <p>Heating Repair <span>Manchester</span></p>
+            </div>
+            <div class="numTop position-relative">
+                <a href="https://gtecplumbing.co.uk/">Click To Visit Our Main Website
+                </a>
+            </div>
+            <div class="safe_divvv d-flex align-items-center">
+                <div class="gasSafeDV">
+                    <img src="images/gassafe.png" alt="Gas Safe" />
+                </div>
+                <div class="whatsSafeDV">
+                    <img src="images/WhatsApp Image 2025-02-22 at 15.35.17_0167e07f.png" alt="WhatsApp" />
+                </div>
+
+                <!--<button class="navbar-toggler d-lg-none" type="button">-->
+                <!--    <span class="navbar-toggler-icon"></span>-->
+                <!--</button>-->
+            </div>
+        </div>
+    </header>
+
+    <!-- 2nd Sec  -->
+
+    <section class="bann_sec position-relative">
+        <div class="container">
+            <div class="bannRow row align-items-center justify-content-between">
+                <div class="bannRow_1 col-lg-5">
+                    <h5>24/7 Expert Care</h5>
+                    <h1>G-Tec – Manchester's Heating Repair Specialists!</h1>
+
+                    <div class="d-flex gap-2">
+                        <a href="tel:+447843277711" class="numBTn mt-4"><i class="fa-solid fa-phone" id="jhj"></i>
+                            &nbsp;
+                            07843277711</a>
+
+                        <a class="numBTn mt-4" href="tel:+441617925446">
+                            <img src="images/telephone.png" style="width: 20px" />
+                            01617925446
+                        </a>
+                    </div>
+
+                    <h6>
+                        <i class="ri-check-double-line"></i> <span>Experts</span>&nbsp;
+                        <i class="ri-check-double-line"></i> <span>Affordable</span>&nbsp;
+                        <i class="ri-check-double-line"></i>
+                        <span>Top-Notch Services</span>
+                    </h6>
+                </div>
+
+                <div class="col-lg-4 bannRow_2" id="forQuotebann" style="position: relative; z-index: 2;">
+                    <div class="formDivv shadow">
+                        <div class="frmHead text-center">
+                            <h2>Schedule Your <span>Appointment</span></h2>
+                        </div>
+                        <form id="serviceForm" class="p-4" onsubmit="return validateForm(event)">
+                            <input type="text" id="name" class="form-control mb-2" placeholder="Enter Your Name" />
+                            <input type="email" id="email" class="form-control mb-2" placeholder="Enter Your Email" />
+                            <input type="tel" id="phone" class="form-control mb-2"
+                                placeholder="Enter Your Phone Number" />
+                            <select id="service" class="form-select mb-2">
+                                <option value="">Select Your Service</option>
+                                <option>Gas Engineers</option>
+                                <option>Underfloor Heating</option>
+                                <option>Power Flushing</option>
+                                <option>Boiler Repair</option>
+                            </select>
+                            <button type="submit">Submit Now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+     <section class="chosSec position-relative py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 chosRow_1">
+                
+                <h2>
+                    <span>G-Tec - Manchester's</span> Underfloor Heating Specialists
+                </h2>
+
+                <p>
+                    G-Tec provides professional underfloor heating installation and repair
+                    services across Manchester, helping homeowners enjoy efficient,
+                    evenly distributed warmth all year round. Whether you're upgrading
+                    your current system or installing a new one, we deliver reliable
+                    solutions tailored to your needs.
+                </p>
+
+                <p>
+                    Our experienced engineers use high-quality materials and the latest
+                    technology to ensure optimal performance and energy efficiency.
+                    From design and installation to maintenance and repairs, we offer
+                    cost-effective underfloor heating services you can trust.
+                </p>
+
+                <div class="choseType_dv">
+                    <div class="row">
+                        <div class="chseTyp_1 col-6 mt-3">
+                            <div class="chsTyp_img">
+                                <img src="images/plubChsTyp_1.png" class="w-100" alt="" />
+                            </div>
+                            <h6>Certified Heating Experts</h6>
+                        </div>
+
+                        <div class="chseTyp_1 col-6 mt-3">
+                            <div class="chsTyp_img">
+                                <img src="images/plubChsTyp_2.png" class="w-100" alt="" />
+                            </div>
+                            <h6>Fast & Reliable Service</h6>
+                        </div>
+
+                       
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="chosIMGG">
+                    <img src="images/floorheat2.jpg" alt="Underfloor Heating Manchester" />
+                </div>
+            </div>
+        </div>
+    </div>
+     </section>
+    <!-- Trust Bar / Brands Strip -->
+    <!-- Trust Bar / Brands Strip -->
+<!-- Trust Bar / Brands Strip -->
+
+  
+
+    <div class="brand-strip py-5" style="background-color: #eaeaea;">
+        <div class="container">
+
+            <div class="row align-items-stretch">
+
+                <!-- Left Image -->
+                <div class="col-md-6 d-flex align-items-center justify-content-center bg-white">
+                    <img src="images/hero-branding.jpg" alt="Trusted Heating Repair Services" class="img-fluid"
+                        style="max-height: 100%; object-fit: contain;">
+                </div>
+
+                <!-- Right Content -->
+                <div class="col-md-6 d-flex">
+                    <div class="p-4 d-flex flex-column justify-content-center w-100">
+
+                        <h3 class="fw-bold mb-3" style="color:#ff5722;">
+                            Heating Repair Manchester Experts
+                        </h3>
+
+                        <p class="text-muted">
+                            We provide reliable and professional heating repair services for homes and businesses.
+                        </p>
+
+                        <ul class="list-unstyled mb-3">
+                            <li class="mb-2">
+                                <i class="fa-solid fa-circle-check me-2" style="color:#ff5722;"></i>
+                                24/7 Expert Heating Repairs
+                            </li>
+                            <li class="mb-2">
+                                <i class="fa-solid fa-wrench me-2" style="color:#ff5722;"></i>
+                                Leak Detection & Repairs
+                            </li>
+                            <li class="mb-2">
+                                <i class="fa-solid fa-screwdriver-wrench me-2" style="color:#ff5722;"></i>
+                                Installation Services
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-sterling-sign me-2" style="color:#ff5722;"></i>
+                                Affordable Pricing
+                            </li>
+                        </ul>
+
+                        <a href="#" class="btn mt-3" style="background:#ff5722; color:#fff;">
+                            Book a Service
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <section class="BoookSec pt-4 text-center">
+        <div class="container">
+            <div class="bkHead">
+                <h2 class="fw-bold">How To <span>Book Us</span>?</h2>
+                <p class="">Book your appointment through these simple steps</p>
+            </div>
+
+            <div class="bookRoww pt-2 position-relative row">
+                <div class="bkColl col-lg-4 position-relative">
+                    <div class="bkIconnn mx-auto d-flex align-items-center justify-content-center position-relative"
+                        style="width: 220px; height: 220px">
+                        <img src="images/bookGtec_1.jpg" class="w-100" alt="Form Icon" />
+                        <span>1</span>
+                    </div>
+                    <h4 class="mt-2">Fill Up The Form</h4>
+                    <p>Provide your details and job requirements in our easy-to-use booking form.</p>
+                    <div class="curvArrBk_img position-absolute">
+                        <img src="images/bookCurv_arr.png" class="w-100" alt="" />
+                    </div>
+                </div>
+
+                <div class="bkColl col-lg-4 position-relative">
+                    <div class="bkIconnn mx-auto d-flex align-items-center justify-content-center position-relative"
+                        style="width: 220px; height: 220px">
+                        <img src="images/heatingrepair.jfif" class="w-100" alt="Service Icon" />
+                        <span>2</span>
+                    </div>
+                    <h4 class="mt-2">Select Your Service</h4>
+                    <p>Choose the heating repair or plumbing service you need from our range of expert solutions.</p>
+                    <div class="curvArrBk_img position-absolute">
+                        <img src="images/bookCurv_arr.png" class="w-100" alt="" />
+                    </div>
+                </div>
+
+                <div class="bkColl col-lg-4">
+                    <div class="bkIconnn mx-auto d-flex align-items-center justify-content-center position-relative"
+                        style="width: 220px; height: 220px">
+                        <img src="images/bookGtec_3.jpg" class="w-100" alt="Call Icon" />
+                        <span>3</span>
+                    </div>
+                    <h4 class="mt-2">Our Experts Will Call You</h4>
+                    <p>We’ll confirm your booking and arrange a convenient time to visit your property.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="brandSec py-4">
+        <div class="container">
+            <div class="bkHead text-center py-5">
+                <h2 class="fw-bold">We work on all brands</h2>
+                <p class="">
+                    At G-Tec, we partner with leading brands in plumbing and heating,
+                    ensuring our customers receive top-quality products and services.
+                    Trust us to deliver reliable solutions from industry-recognized
+                    manufacturers for your home.
+                </p>
+            </div>
+
+            <div class="brndsIMG">
+                <div class="container-fluid">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item p-2">
+                            <div class="brandImg">
+                                <img src="images/gtCom_1.png" alt="" class="w-100" />
+                            </div>
+                        </div>
+                        <div class="item p-2 pb-5">
+                            <div class="brandImg">
+                                <img src="images/gtCom_2.png" alt="" class="w-100" />
+                            </div>
+                        </div>
+                        <div class="item p-2">
+                            <div class="brandImg">
+                                <img src="images/gtCom_3.png" alt="" class="w-100" />
+                            </div>
+                        </div>
+                        <div class="item p-2">
+                            <div class="brandImg">
+                                <img src="images/gtCom_4.png" alt="" class="w-100" />
+                            </div>
+                        </div>
+                        <div class="item p-2">
+                            <div class="brandImg">
+                                <img src="images/gtCom_5.png" alt="" class="w-100" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ************** 4th Sec  -->
+
+    <section class="expSec pb-5">
+        <div class="container">
+            <div class="bkHead bkHead_1 text-center">
+                <h2 class="fw-bold"><span>Heating Repair </span>Solutions</h2>
+                <p class="">Reliable & Fast Service - 24/7 Emergency Repairs</p>
+            </div>
+
+            <div class="expRoww row mt-5 mb-3">
+                <div class="col-lg-3 col-md-6">
+                    <div class="expCardd">
+                        <div class="expImgg">
+                            <img src="images/gaseng.jpg" alt="" />
+                        </div>
+
+                        <div class="expTxt position-relative">
+                            <h5> Gas Engineers
+                            </h5>
+                            <p>
+                                Professional commercial gas engineers providing safe installations, maintenance, and
+                                repairs for
+                                business.
+                            </p>
+                            <a href="#forQuotebann" style="text-decoration: none;"><button>Book Now</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="expCardd">
+                        <div class="expImgg">
+                            <img src="images/floorheat2.jpg" alt="" />
+                        </div>
+
+                        <div class="expTxt position-relative">
+                            <h5>Underfloor Heating</h5>
+                            <p>
+                                Underfloor heating installation and maintenance for efficient.
+                            </p>
+                            <a href="#forQuotebann" style="text-decoration: none;"><button>Book Now</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="expCardd">
+                        <div class="expImgg">
+                            <img src="images/power1.jpg" alt="" />
+                        </div>
+
+                        <div class="expTxt position-relative">
+                            <h5>Power Flushing</h5>
+                            <p>
+                                Power flushing services to clean heating systems, improving efficiency and extending the
+                                lifespan of
+                                radiators.
+                            </p>
+                            <a href="#forQuotebann" style="text-decoration: none;"><button>Book Now</button></a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="expCardd">
+                        <div class="expImgg">
+                            <img src="images/boilerrapir3.jpg" alt="" />
+                        </div>
+
+                        <div class="expTxt position-relative">
+                            <h5>Boiler Repair</h5>
+                            <p>
+                                Expert boiler repair services to keep your heating system running efficiently. Fast
+                                response, reliable
+                                solutions.
+                            </p>
+                            <a href="#forQuotebann" style="text-decoration: none;"><button>Book Now</button></a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5th sec  -->
+
+  <section class="chosSec position-relative py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 chosRow_1">
+                    <div class="chosHead">
+                        <h2>Why <span>Choose Us</span> ?</h2>
+                    </div>
+                    <h3>
+                        <span>G-Tec - Manchester's</span>Heating Repair & Plumbing
+                        Experts
+                    </h3>
+
+                    <p>
+                        G-Tec delivers expert heating repair and plumbing services across
+                        Manchester, ensuring your home stays warm, safe, and efficient.
+                        From emergency repairs to full installations, our skilled team is
+                        here to help.
+                    </p>
+
+                    <p>
+                        We focus on reliable, cost-effective solutions using quality
+                        materials and modern tools. For maintenance, urgent fixes, or
+                        complete system upgrades, trust G-Tec for lasting results and
+                        honest service.
+                    </p>
+
+                    <div class="choseType_dv">
+                        <div class="row">
+                            <div class="chseTyp_1 col-6 mt-3">
+                                <div class="chsTyp_img">
+                                    <img src="images/plubChsTyp_1.png" class="w-100" alt="" />
+                                </div>
+                                <h6>Expert Technicians</h6>
+                            </div>
+
+                            <div class="chseTyp_1 col-6 mt-3">
+                                <div class="chsTyp_img">
+                                    <img src="images/plubChsTyp_2.png" class="w-100" alt="" />
+                                </div>
+                                <h6>Quick Response</h6>
+                            </div>
+
+                            <div class="chseTyp_1 col-6 mt-3">
+                                <div class="chsTyp_img">
+                                    <img src="images/plubChsTyp_3.png" class="w-100" alt="" />
+                                </div>
+                                <h6>Transparent Pricing</h6>
+                            </div>
+
+                            <div class="chseTyp_1 col-6 mt-3">
+                                <div class="chsTyp_img">
+                                    <img src="images/plubChsTyp_4.png" class="w-100" alt="" />
+                                </div>
+                                <h6>Long-Term Solutions</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="chosIMGG">
+                        <img src="images/commercialheating.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+     
+    </section>
+
+    <!-- Brands  -->
+    <section class="brands-section1 py-5">
+        <div class="container1">
+            <div class="brands-wrapper1" style="display: flex; justify-content: center">
+                <div class="brands-content1">
+                    <div class="brand-grid1">
+                        <div class="brand-card1">
+                            <img src="images/wraslogo.png" alt="Brand 1" class="brand-logo1" />
+                        </div>
+                        <div class="brand-card1">
+                            <img src="images/gassafe.png" alt="Brand 2" class="brand-logo1" />
+                        </div>
+
+                        <div class="brand-card1">
+                            <img src="images/niceieaproved.png" alt="Brand 4" class="brand-logo1" />
+                        </div>
+                        <div class="brand-card1">
+                            <img src="images/cscslogo.jpg" alt="Brand 4" class="brand-logo1" />
+                        </div>
+                        <div class="brand-card1">
+                            <img src="images/wiaspslogo.jpg" alt="Brand 4" class="brand-logo1" />
+                        </div>
+                        <div class="brand-card1">
+                            <img src="images/hselogo.png" alt="Brand 4" class="brand-logo" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Areas We Cover Section -->
+   <section class="areas-covered py-5 bg-white">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- LEFT SIDE MAP -->
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="map-container">
+
+                    <img src="images/map.jpg" class="img-fluid w-100" alt="Map">
+
+                    <!-- Pins -->
+                    <div class="map-pin pin1" style="top:65%; left:63%;">
+    <i class="fa-solid fa-location-dot"></i>
+    <span>City Centre</span>
+</div>
+
+<div class="map-pin pin2" style="top:32%; left:51%;">
+    <i class="fa-solid fa-location-dot"></i>
+    <span>Prestwich</span>
+</div>
+
+<div class="map-pin pin3" style="top:17%; left:52%;">
+    <i class="fa-solid fa-location-dot"></i>
+    <span>Whitefield</span>
+</div>
+
+<div class="map-pin pin4" style="top:55%; left:40%;">
+    <i class="fa-solid fa-location-dot"></i>
+    <span>Salford</span>
+</div>
+
+<div class="map-pin pin5" style="top:45%; left:50%;">
+    <i class="fa-solid fa-location-dot"></i>
+    <span>Broughton Park</span>
+</div>
+
+<div class="map-pin pin6" style="top:38%; left:60%;">
+    <i class="fa-solid fa-location-dot"></i>
+    <span>Crumpsall</span>
+</div>
+
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE CONTENT -->
+            <div class="col-lg-6">
+                <div class="mb-4">
+                    <h2>
+                        Areas We <span class="text-orange">Serve</span>
+                    </h2>
+                    <p class="text-muted">
+                        We provide professional plumbing and heating services across <span style="font-weight:bold ; color:#FF5722">Manchester</span>  and surrounding areas.
+                    </p>
+                </div>
+
+                <ul class="area-list list-unstyled">
+                    <li><i class="fa-solid fa-check"></i>  City Centre</li>
+                    <li><i class="fa-solid fa-check"></i> Prestwich</li>
+                    <li><i class="fa-solid fa-check"></i> Whitefield</li>
+                    <li><i class="fa-solid fa-check"></i> Broughton Park</li>
+                    <li><i class="fa-solid fa-check"></i> Crumpsall</li>
+                    <li><i class="fa-solid fa-check"></i> Salford</li>
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+    <!--******** Footer ************-->
+    <footer>
+        <section class="foot_sec">
+            <div class="lasttt">
+                <div class="container">
+                    <div class="row flex-column align-items-center">
+                        <div class="col-md-6 text-center">
+                            <a href="" class="logAnch_lsst d-block"><img src="images/logo (2).png"
+                                    alt="G-TEC Logo" /></a>
+                        </div>
+                        <div class="sscc col-md-6 text-center">
+                            <p>
+                                GTEC Plumbers are available in Manchester City Centre. We also
+                                cover Prestwich Heating Repairs, Whitefield Heating Repairs, Broughton Park
+                                Heating & Crumpsall Heating Repair needs
+                            </p>
+                            <div class="lastt_socc d-flex justify-content-center gap-3">
+                                <a href="https://x.com/gtec38"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="https://www.facebook.com/GtecGasSevices"><i
+                                        class="ri-facebook-box-line"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="footLAst py-2">
+            <div class="container d-flex justify-content-center align-items-center gap-4">
+                <p>&copy; 2025 All Rights Reserved <a href="https://gtecplumbing.co.uk/">G-TEC PLUMBING SERVICES LTD</a></p>
+                <p>Designed & Developed by <a href="https://kyleinfotech.co.in/">Kyle Infotech</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(".owl-carousel").owlCarousel({
+            loop: true, margin: 10, nav: false, dots: false, autoplay: true,
+            responsive: { 0: { items: 2 }, 600: { items: 3 }, 1000: { items: 5 } }
+        });
+
+        function validateForm(event) {
+            let isValid = true;
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let phone = document.getElementById("phone").value.trim();
+            let service = document.getElementById("service").value;
+
+            if (name === "" || email === "" || phone === "" || service === "") {
+                alert("Please fill in all fields.");
+                isValid = false;
+            }
+
+            if (!isValid) event.preventDefault();
+            return isValid;
+        }
+    </script>
+</body>
+
+</html>

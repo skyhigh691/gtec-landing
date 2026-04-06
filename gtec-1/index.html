@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>G-Tec Section</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+        integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style.css" />
+
+    <link rel="stylesheet" href="./assets/responsive.css" />
+
+    <style>
+        body {
+  font-family: 'Poppins', sans-serif;
+}
+
+       .bann_sec {
+    background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("../gtec-1/images/hero-vans.jpg");
+        
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding: 80px 0;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+.map-container {
+    position: relative;
+}
+
+.map-container img {
+    width: 100%;
+}
+
+/* Map Pins */
+.map-pin {
+    position: absolute;
+    transform: translate(-50%, -100%);
+    text-align: center;
+}
+
+.map-pin i {
+    font-size: 22px;
+    color: #ec6425;
+    display: block;
+}
+
+.map-pin span {
+    background: #fff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* Area list */
+.area-list li {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.area-list i {
+    color: #ec6425;
+    margin-right: 8px;
+}
+        .bann_sec h1 {
+            font-size: 2.7rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .glass-bg {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 16px;
+            padding: 30px;
+        }
+        .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #FF5722;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #e64a19; /* slightly darker shade */
+  transform: translateY(-2px);
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
+
+.map-container {
+  position: relative;
+}
+
+.map-pin {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  text-align: center;
+  cursor: pointer;
+  animation: float 3s ease-in-out infinite;
+}
+
+.map-pin i {
+  color: #FF5722;
+  font-size: 22px;
+  animation: pulse 1.5s infinite;
+}
+
+/* Label styling */
+.map-pin span {
+  display: block;
+  background: #fff;
+  color: #333;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 20px;
+  margin-top: 5px;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.3s ease;
+}
+
+/* Show label on hover */
+.map-pin span {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: #fff;
+  color: #333;
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.map-pin:hover span {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.map-pin span::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translate(-50%, -100%) translateY(0); }
+  50% { transform: translate(-50%, -100%) translateY(-6px); }
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* SECTION */
+.areas-covered {
+  overflow: hidden;
+}
+
+/* MAP */
+.map-container {
+  position: relative;
+}
+
+.map-container img {
+  border-radius: 10px;
+}
+
+/* 🎯 MAP PINS UPDATED */
+
+/* 🎯 INDIVIDUAL POSITION FIXES */
+
+/* Manchester */
+.pin1 span {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Prestwich */
+.pin2 span {
+  left: 0;
+  transform: translateX(-20%);
+}
+
+/* Whitefield */
+.pin3 span {
+  left: 100%;
+  transform: translateX(-80%);
+}
+
+/* Salford */
+.pin4 span {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Broughton Park */
+.pin5 span {
+  left: 100%;
+  transform: translateX(-70%);
+}
+
+/* Crumpsall */
+.pin6 span {
+  left: 0;
+  transform: translateX(-10%);
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+/* OPTIONAL: Fine tuning sizes */
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.3rem; }
+h5 { font-size: 1.1rem; }
+h6 { font-size: 1rem; }
+    </style>
+</head>
+
+<body class="">
+    <!-- 2nd Sec  -->
+
+    <section class="bann_sec" id="forQuotebann">
+        <div class="container">
+            <div class="bannRow row align-items-center justify-content-between position-relative">
+                <div class="d-flex justify-content-between">
+                    <!-- <div style="background-color: #EC6425 ; width:130px; height: 2px; margin-top: -30px;"></div> -->
+                    <div class="d-flex gap-3 align-items-center">
+                        <!-- Mobile Call -->
+                        <a href="tel:+441617925446" class="d-flex align-items-center text-decoration-none text-white"
+                            style="font-size: 22px">
+                            <img src="images/telephone.png" style="height: 25px;
+                margin-right: 8px" /> 01617925446
+                        </a>
+
+                        <!-- Landline -->
+                        <a href="tel:+447843277711" class="d-flex align-items-center text-decoration-none text-white"
+                            style="font-size: 22px">
+                            <i class="ri-phone-line fs-4 me-2" style="margin-right: 4px"></i>
+                            07843277711
+                        </a>
+                    </div>
+                    <a href="https://gtecplumbing.co.uk/" class="bkVisit text-center">Click Here To Visit Our Main
+                        Website</a>
+                </div>
+                <div class="row">
+                    <header class="topHEad">
+                        <div class="container d-flex justify-content-between align-items-center">
+                            <a href="" class="logAnch"><img src="images/logo (2).png" alt="G-TEC Logo"
+                                    class="h-14" /></a>
+                            <div class="topHEad_txxt">
+                                <p>Central Heating <span>Manchester</span></p>
+                            </div>
+
+                            <div class="safe_divvv d-flex align-items-center">
+                                <div class="gasSafeDV">
+                                    <img src="images/gassafe.png" alt="Gas Safe" />
+                                </div>
+                                <div class="whatsSafeDV">
+                                    <img src="images/WhatsApp Image 2025-02-22 at 15.35.17_0167e07f.jpg"
+                                        alt="WhatsApp" />
+                                </div>
+
+                                <!--<button class="navbar-toggler d-lg-none" type="button">-->
+                                <!--    <span class="navbar-toggler-icon"></span>-->
+                                <!--</button>-->
+                            </div>
+                        </div>
+                    </header>
+
+                    <!-- <div style="background-color: #EC6425 ; width:130px; height: 2px; margin-top: -30px;"></div> -->
+                </div>
+                <div class="bannRow_1 col-lg-5">
+                    <h1>G-Tec – Keeping Manchester Warm, One Pipe At A Time!</h1>
+                    <ul class="mt-3">
+                        <li>
+                            <span class="list-icon"><i class="fa-solid fa-chevron-right"></i></span>&nbsp; Rapid Repairs
+                            & Maintenance
+                        </li>
+                        <li>
+                            <span class="list-icon"><i class="fa-solid fa-chevron-right"></i></span>&nbsp; Expert
+                            Installations
+                        </li>
+                        <li>
+                            <span class="list-icon"><i class="fa-solid fa-chevron-right"></i></span>&nbsp;
+                            Energy-Efficient Solutions
+                        </li>
+                    </ul>
+                    <a class="numBTn" href="tel:+447843277711"><i class="fa-solid fa-phone"></i>&nbsp; 07843277711</a>
+                </div>
+
+                <div class="col-lg-4 bannRow_2" style="margin-bottom: 10px">
+                    <div class="formDivv bg-light rounded shadow">
+                        <div class="frmHead">
+                            <h2 class="">
+                                Schedule Your <span class="">Appointment</span>
+                            </h2>
+                        </div>
+                        <form id="serviceForm" class="p-4" onsubmit="return validateForm(event)">
+                            <input type="text" id="name" class="form-control mb-2" placeholder="Enter Your Name" />
+                            <small id="nameError" class="text-danger"></small>
+
+                            <input type="email" id="email" class="form-control mb-2" placeholder="Enter Your Email" />
+                            <small id="emailError" class="text-danger"></small>
+
+                            <input type="tel" id="phone" class="form-control mb-2"
+                                placeholder="Enter Your Phone Number" />
+                            <small id="phoneError" class="text-danger"></small>
+
+                            <select id="service" class="form-select mb-2">
+                                <option value="">Select Your Service</option>
+                                <option>Central heating</option>
+                                <option>Power Flushing</option>
+                                <option>Underfloor Heating</option>
+                                <option>Renewable Energy</option>
+                            </select>
+                            <small id="serviceError" class="text-danger"></small>
+
+                            <button type="submit" class="btn btn-primary">
+                                Submit Now
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+      <div class="brand-strip py-5" style="background-color: #eaeaea;">
+        <div class="container">
+
+            <div class="row align-items-stretch">
+
+                <!-- Left Image -->
+                <div class="col-md-6 d-flex align-items-center justify-content-center bg-white">
+                    <img src="images/hero-branding.jpg" alt="Trusted Plumbing Services" class="img-fluid"
+                        style="max-height: 100%; object-fit: contain;">
+                </div>
+
+                <!-- Right Content -->
+                <div class="col-md-6 d-flex">
+                    <div class="p-4 d-flex flex-column justify-content-center w-100">
+
+                        <h3 class="fw-bold mb-3" style="color:#ff5722;">
+                            Central Heating Manchester Experts
+                        </h3>
+
+                        <p class="text-muted">
+                            We provide reliable and professional central heating services for homes and businesses.
+                        </p>
+
+                        <ul class="list-unstyled mb-3">
+                            <li class="mb-2">
+                                <i class="fa-solid fa-circle-check me-2" style="color:#ff5722;"></i>
+                                24/7 Central Heating Services
+                            </li>
+                            <li class="mb-2">
+                                <i class="fa-solid fa-wrench me-2" style="color:#ff5722;"></i>
+                                Leak Detection & Repairs
+                            </li>
+                            <li class="mb-2">
+                                <i class="fa-solid fa-screwdriver-wrench me-2" style="color:#ff5722;"></i>
+                                Installation Services
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-sterling-sign me-2" style="color:#ff5722;"></i>
+                                Affordable Pricing
+                            </li>
+                        </ul>
+
+                        <a href="#" class="btn mt-3" style="background:#ff5722; color:#fff;">
+                            Book a Service
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- Brands  -->
+
+    <section class="brandSec py-4">
+        <div class="container">
+            <div class="bkHead text-center py-5">
+                <h2 class="fw-bold">We work on all brands</h2>
+                <p class="">
+                    At G-Tec, we partner with leading brands in plumbing and heating,
+                    ensuring our customers receive top-quality products and services.
+                    Trust us to deliver reliable solutions from industry-recognized
+                    manufacturers for your home.
+                </p>
+            </div>
+
+            <div class="brndsIMG">
+                <div class="container-fluid">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item p-2">
+                            <div class="brandImg">
+                                <img src="images/gtCom_1.png" alt="" class="w-100" />
+                            </div>
+                        </div>
+                        <div class="item p-2 pb-5">
+                            <div class="brandImg">
+                                <img src="images/gtCom_2.png" alt="" class="w-100" />
+                            </div>
+                        </div>
+                        <div class="item p-2">
+                            <div class="brandImg">
+                                <img src="images/gtCom_3.png" alt="" class="w-100" />
+                            </div>
+                        </div>
+                        <div class="item p-2">
+                            <div class="brandImg">
+                                <img src="images/gtCom_4.png" alt="" class="w-100" />
+                            </div>
+                        </div>
+                        <div class="item p-2">
+                            <div class="brandImg">
+                                <img src="images/gtCom_5.png" alt="" class="w-100" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--BRANDS SECTION -->
+
+    <!-- HOW  TO BOOK US --->
+
+    <section class="BoookSec pt-4 text-center">
+        <div class="container-fluid">
+            <div class="bkHead">
+                <h2 class="fw-bold">How To Book Us?</h2>
+                <p class="">Book your appointment through these simple steps</p>
+            </div>
+
+            <div class="bookRoww row">
+                <div class="bkColl col-md-4 position-relative">
+                    <div class="bkIconnn position-absolute rounded-circle mx-auto d-flex align-items-center justify-content-center"
+                        style="width: 120px; height: 120px">
+                        <img src="images/content.png" class="w-50" alt="Form Icon" />
+                    </div>
+                    <h4 class="mt-2">Fill Up The Form</h4>
+                </div>
+                <div class="bkColl col-md-4 position-relative">
+                    <div class="bkIconnn position-absolute rounded-circle mx-auto d-flex align-items-center justify-content-center"
+                        style="width: 120px; height: 120px">
+                        <img src="images/SIMPLE FORM.png" class="w-50" alt="Checklist Icon" />
+                    </div>
+                    <h4 class="mt-2">Select your Service</h4>
+                </div>
+                <div class="bkColl col-md-4 position-relative">
+                    <div class="bkIconnn position-absolute rounded-circle mx-auto d-flex align-items-center justify-content-center"
+                        style="width: 120px; height: 120px">
+                        <img src="images/CALL BACK.png" class="w-50" alt="Phone Icon" />
+                    </div>
+                    <h4 class="mt-2">Our Experts Will Call You</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ************** 4th Sec  -->
+
+    <section class="expSec pb-5">
+        <div class="container">
+            <div class="bkHead bkHead_1 text-center">
+
+                <h2 class="fw-bold">Central Heating  Solutions</h2>
+                <p class="">Reliable & Fast Service - 24/7 Expert Repairs</p>
+            </div>
+
+
+            <div class="expRoww row mt-5 mb-3">
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="expCardd">
+                        <div class="expImgg"><img src="images/cental.jpg" alt=""></div>
+                        <h5>Central heating</h5>
+                        <p>Reliable central heating services in Manchester for efficient installations, repairs, and
+                            maintenance to ensure warmth. </p>
+                        <a href="#forQuotebann" style="text-decoration: none;"><button>Book Now</button></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="expCardd">
+                        <div class="expImgg"><img src="images/power1.jfif" alt=""></div>
+                        <h5>Power Flushing</h5>
+                        <p>Power flushing services to clean heating systems, improving efficiency and extending the
+                            lifespan of radiators</p>
+                        <a href="#forQuotebann" style="text-decoration: none;"><button>Book Now</button></a>
+                    </div>
+                </div>
+
+
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="expCardd">
+                        <div class="expImgg"><img src="images/floorheat2.jpg" alt=""></div>
+                        <h5>Underfloor Heating</h5>
+                        <p>Underfloor heating installation and maintenance for efficient, comfortable warmth throughout
+                            your home </p>
+                        <a href="#forQuotebann" style="text-decoration: none;"><button>Book Now</button></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="expCardd">
+                        <div class="expImgg"><img src="images/renewableimage3-min.jpg" alt=""></div>
+                        <h5>Renewable Energy</h5>
+                        <p>Renewable energy solutions for sustainable heating, reducing carbon footprint and energy
+                            costs for homes</p>
+                        <a href="#forQuotebann" style="text-decoration: none;"><button>Book Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </section>
+    <!-- 5th sec  -->
+<!-- Areas We Cover Section -->
+   <section class="areas-covered py-5 bg-white">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- LEFT SIDE MAP -->
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="map-container">
+
+                    <img src="images/map.jpg" class="img-fluid w-100" alt="Map">
+
+                    <!-- Pins -->
+                    <div class="map-pin pin1" style="top:65%; left:63%;">
+    <i class="fa-solid fa-location-dot"></i>
+    <span>City Centre</span>
+</div>
+
+<div class="map-pin pin2" style="top:32%; left:51%;">
+    <i class="fa-solid fa-location-dot"></i>
+    <span>Prestwich</span>
+</div>
+
+<div class="map-pin pin3" style="top:17%; left:52%;">
+    <i class="fa-solid fa-location-dot"></i>
+    <span>Whitefield</span>
+</div>
+
+<div class="map-pin pin4" style="top:55%; left:40%;">
+    <i class="fa-solid fa-location-dot"></i>
+    <span>Salford</span>
+</div>
+
+<div class="map-pin pin5" style="top:45%; left:50%;">
+    <i class="fa-solid fa-location-dot"></i>
+    <span>Broughton Park</span>
+</div>
+
+<div class="map-pin pin6" style="top:38%; left:60%;">
+    <i class="fa-solid fa-location-dot"></i>
+    <span>Crumpsall</span>
+</div>
+
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE CONTENT -->
+            <div class="col-lg-6">
+                <div class="mb-4">
+                    <h2>
+                        Areas We <span class="text-orange">Serve</span>
+                    </h2>
+                    <p class="text-muted">
+                        We provide professional plumbing and heating services across <span style="font-weight:bold ; color:#FF5722">Manchester</span>  and surrounding areas.
+                    </p>
+                </div>
+
+                <ul class="area-list list-unstyled">
+                    <li><i class="fa-solid fa-check"></i>  City Centre</li>
+                    <li><i class="fa-solid fa-check"></i> Prestwich</li>
+                    <li><i class="fa-solid fa-check"></i> Whitefield</li>
+                    <li><i class="fa-solid fa-check"></i> Broughton Park</li>
+                    <li><i class="fa-solid fa-check"></i> Crumpsall</li>
+                    <li><i class="fa-solid fa-check"></i> Salford</li>
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+    <section class="chosSec position-relative">
+        <div class="container-fluid">
+            <div class="chosHead">
+                <h2>Why Choose Us ?</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 chosRow_1">
+                    <h4>G-Tec - Manchester's</h4>
+                    <h2>Central Heating & Plumbing Experts</h2>
+
+                    <p>
+                        At G-Tec, we provide top-tier plumbing and heating services across
+                        Manchester, ensuring your home stays warm, efficient, and safe all
+                        year round. Our experienced professionals are committed to
+                        delivering high-quality solutions, from emergency repairs to
+                        expert installations.
+                    </p>
+
+                    <p>
+                        We prioritize customer satisfaction with reliable, cost- effective
+                        services tailored to your needs. Using only the best materials and
+                        the latest technology, we guarantee long-lasting results. Whether
+                        you need routine maintenance, urgent repairs, or a full heating
+                        system installation, G-Tec is your go-to choice for expertise,
+                        transparency, and exceptional service.
+                    </p>
+                    <p>Trust G-Tec — Keeping Your Home Comfortable and Secure.</p>
+
+                    <div class="chosBtn_dv">
+                        <button onclick="window.location.href='tel:+441617925446';">
+                            0161 792 5446
+                        </button>
+                        <button onclick="window.location.href='#forQuotebann';">
+                            GET A FREE QUOTATION
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="chosIMGG">
+                        <img src="images/chosIMGGG.jpg" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--******** Footer ************-->
+
+    <footer style="background-color: rgb(212, 212, 212)">
+        <section class="foot_sec">
+            <div class="lasttt">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a href="" class="logAnch_lsst"><img src="images/logo (2).png" alt="G-TEC Logo" /></a>
+                        </div>
+
+                        <div class="sscc col-md-6">
+                            <p>
+                                GTEC Plumbers are available in Manchester City Centre. We also
+                                cover Prestwich Plumbing, Whitefield Plumbing, Broughton Park
+                                Plumbing & Crumpsall Plumbing needs
+                            </p>
+                            <div class="lastt_socc" style="display: flex; justify-content: end">
+                                <a href="https://x.com/gtec38"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="https://www.facebook.com/GtecGasSevices"><i
+                                        class="ri-facebook-box-line"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="footLAst py-2">
+            <div class="container d-flex justify-content-center align-items-center gap-4">
+                <p>
+                    &copy; 2025 All Rights Reserved
+                    <a href="https://gtecplumbing.co.uk/">G-TEC PLUMBING SERVICES LTD</a>
+                </p>
+                <p>
+                    Designed & Developed by
+                    <a href="https://kyleinfotech.co.in/">Kyle Infotech</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- <div class="sss"><img style="width: 100%;" src="images/justttt.png" alt=""></div> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function validateForm(event) {
+            let isValid = true;
+
+            // Clear previous error messages
+            document.getElementById("nameError").innerText = "";
+            document.getElementById("emailError").innerText = "";
+            document.getElementById("phoneError").innerText = "";
+            document.getElementById("serviceError").innerText = "";
+
+            // Name validation
+            let name = document.getElementById("name").value.trim();
+            if (name === "") {
+                document.getElementById("nameError").innerText = "Name is required.";
+                isValid = false;
+            }
+
+            // Email validation
+            let email = document.getElementById("email").value.trim();
+            let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (email === "") {
+                document.getElementById("emailError").innerText =
+                    "Email is required.";
+                isValid = false;
+            } else if (!emailPattern.test(email)) {
+                document.getElementById("emailError").innerText =
+                    "Enter a valid email.";
+                isValid = false;
+            }
+
+            // Phone validation
+            let phone = document.getElementById("phone").value.trim();
+            let phonePattern = /^[0-9]{10}$/;
+            if (phone === "") {
+                document.getElementById("phoneError").innerText =
+                    "Phone number is required.";
+                isValid = false;
+            } else if (!phonePattern.test(phone)) {
+                document.getElementById("phoneError").innerText =
+                    "Enter a valid 10-digit phone number.";
+                isValid = false;
+            }
+
+            // Service validation
+            let service = document.getElementById("service").value;
+            if (service === "") {
+                document.getElementById("serviceError").innerText =
+                    "Please select a service.";
+                isValid = false;
+            }
+
+            if (!isValid) {
+                event.preventDefault();
+            }
+            return isValid;
+        }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- <div class="sss"><img style="width: 100%;" src="images/justttt.png" alt=""></div> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(".owl-carousel").owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            autoplayTimeout: 3000,
+            autoplay: true,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                600: {
+                    items: 3,
+                },
+                1000: {
+                    items: 5,
+                },
+            },
+        });
+    </script>
+
+    <script>
+        function validateForm(event) {
+            let isValid = true;
+
+            // Clear previous error messages
+            document.getElementById("nameError").innerText = "";
+            document.getElementById("emailError").innerText = "";
+            document.getElementById("phoneError").innerText = "";
+            document.getElementById("serviceError").innerText = "";
+
+            // Name validation
+            let name = document.getElementById("name").value.trim();
+            if (name === "") {
+                document.getElementById("nameError").innerText = "Name is required.";
+                isValid = false;
+            }
+
+            // Email validation
+            let email = document.getElementById("email").value.trim();
+            let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (email === "") {
+                document.getElementById("emailError").innerText =
+                    "Email is required.";
+                isValid = false;
+            } else if (!emailPattern.test(email)) {
+                document.getElementById("emailError").innerText =
+                    "Enter a valid email.";
+                isValid = false;
+            }
+
+            // Phone validation
+            let phone = document.getElementById("phone").value.trim();
+            let phonePattern = /^[0-9]{10}$/;
+            if (phone === "") {
+                document.getElementById("phoneError").innerText =
+                    "Phone number is required.";
+                isValid = false;
+            } else if (!phonePattern.test(phone)) {
+                document.getElementById("phoneError").innerText =
+                    "Enter a valid 10-digit phone number.";
+                isValid = false;
+            }
+
+            // Service validation
+            let service = document.getElementById("service").value;
+            if (service === "") {
+                document.getElementById("serviceError").innerText =
+                    "Please select a service.";
+                isValid = false;
+            }
+
+            if (!isValid) {
+                event.preventDefault();
+            }
+            return isValid;
+        }
+    </script>
+    
+
+    <script>
+        $(".owl-carousel").owlCarousel({
+            loop: true, margin: 10, nav: false, dots: false, autoplay: true,
+            responsive: { 0: { items: 2 }, 600: { items: 3 }, 1000: { items: 5 } }
+        });
+
+        function validateForm(event) {
+            let isValid = true;
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let phone = document.getElementById("phone").value.trim();
+            let service = document.getElementById("service").value;
+
+            if (name === "" || email === "" || phone === "" || service === "") {
+                alert("Please fill in all fields.");
+                isValid = false;
+            }
+
+            if (!isValid) event.preventDefault();
+            return isValid;
+        }
+    </script>
+
+</body>
+
+</html>

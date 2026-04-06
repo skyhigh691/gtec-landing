@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex">
+    <title>G-Tec Section</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+        integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- owl min css -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- owl theme default -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./assets/style.css" />
+
+    <link rel="stylesheet" href="./assets/responsive.css" />
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .border-orange {
+            border: 2px solid #ec6425;
+        }
+        body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+        .shadow-orange {
+            box-shadow: 0 10px 20px rgba(236, 100, 37, 0.25);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .shadow-orange:hover {
+            box-shadow: 0 12px 28px rgba(236, 100, 37, 0.4);
+            transform: translateY(-6px);
+        }
+
+        .step-number {
+            position: absolute;
+            bottom: -10px;
+            right: -10px;
+            background: #ec6425;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 50%;
+            padding: 10px 14px;
+            font-size: 1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .step-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .step-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .bg-orange {
+            background-color: #ec6425 !important;
+        }
+
+        .btn-orange {
+            background-color: #ec6425;
+            color: #fff;
+            padding: 0.5rem 1.2rem;
+            border: none;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .btn-orange:hover {
+            background-color: #d8561f;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(236, 100, 37, 0.3);
+        }
+
+        .expCard {
+            background-color: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .expCard:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .expImageWrapper img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .bg-orange {
+            background-color: #ec6425 !important;
+        }
+
+        .text-orange {
+            color: #ec6425 !important;
+        }
+
+        .btn-orange {
+            background-color: #ec6425;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .btn-orange:hover {
+            background-color: #c9541f;
+            transform: scale(1.03);
+        }
+
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-scale:hover {
+            transform: translateY(-10px) scale(1.02);
+        }
+
+        .rounded-top-5 {
+            border-top-left-radius: 2rem;
+            border-top-right-radius: 2rem;
+        }
+
+        /**visit main website**/
+
+        .bkVisit {
+            display: inline-block;
+            position: relative;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 16px;
+            letter-spacing: 2px;
+        }
+
+        .custom-shape {
+            background-color: #ec6425;
+            color: white;
+            font-weight: 600;
+            padding: 16px 40px;
+            border-radius: 30px 50px 30px 50px;
+            /* Uniquely rounded corners */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .custom-shape:hover {
+            background-color: #c9541f;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .custom-shape:focus {
+            outline: none;
+        }
+
+        /* card shape**/
+
+        .bg-gradient {
+            background: black;
+        }
+
+        .custom-card {
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            /* Custom rounded corners */
+            transition: transform 0.3s ease, box-shadow 0.3s ease-in-out;
+        }
+
+        .custom-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .custom-card-img {
+            clip-path: polygon(0 0,
+                    100% 0,
+                    100% 75%,
+                    0 100%);
+            /* Custom angle effect for the image */
+            object-fit: cover;
+        }
+
+        .custom-card-title i {
+            margin-right: 10px;
+        }
+
+        .custom-card-title {
+            font-size: 20px;
+            color: white;
+        }
+
+        .btn-light {
+            background-color: white;
+            color: #ec6425;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+            border: 2px solid #ec6425;
+        }
+
+        .btn-light:hover {
+            background-color: #ec6425;
+            color: white;
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .text-white-50 {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Floating effect on hover */
+        .custom-card:hover .card-img-top {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        /* Custom shape for the body */
+        .custom-card:hover .card-body {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+
+
+        /**** form***/
+        .form-image-container {
+            display: flex;
+            flex-wrap: wrap;
+            min-height: 90vh;
+        }
+
+        .form-side {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            background-color: #f9f9f9;
+        }
+
+        .image-side {
+            flex: 1;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .image-side img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .form-image-container {
+                flex-direction: column;
+            }
+
+            .image-side {
+                height: 300px;
+            }
+        }
+
+
+
+        /* header**/
+
+        /* General Header Styles */
+        .topHEad {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .topHEad .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logAnch img {
+            height: 90px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .logAnch img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Text styling */
+        .topHEad_txxt p {
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+            margin: 0;
+            text-align: center;
+        }
+
+        .topHEad_txxt span {
+            color: #ff5722;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        /* Phone number */
+        .numTop a {
+            font-size: 16px;
+            color: #ffffff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.3s ease;
+        }
+
+        .numTop a:hover {
+            color: #ff5722;
+        }
+
+        .numTop i {
+            font-size: 20px;
+        }
+
+        /* Icons */
+        .safe_divvv {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .icon {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .icon:hover {
+            transform: scale(1.1);
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 767px) {
+            .topHEad .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .numTop {
+                margin-top: 10px;
+            }
+
+            .safe_divvv {
+                margin-top: 10px;
+            }
+        }
+
+
+        .altHeader {
+            background-color: #fff;
+            /* White background */
+            padding: 15px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        }
+
+        .altHeader .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .altHeader .logo-area {
+            display: flex;
+            align-items: center;
+        }
+
+        .altHeader .logo {
+            height: 75px;
+            margin-right: 15px;
+        }
+
+        .altHeader .tagline {
+            font-size: 28px;
+            color: #555;
+            text-align: center;
+            margin: 0;
+        }
+
+        .altHeader .tagline span {
+            color: #333;
+            font-weight: bold;
+        }
+
+        .altHeader .cta-area {
+            display: flex;
+            align-items: center;
+        }
+
+        .altHeader .phone-cta {
+            display: inline-flex;
+            align-items: center;
+            background-color: #ff5722;
+            /* Primary color for CTA button */
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            margin-right: 15px;
+        }
+
+        .altHeader .phone-cta i {
+            margin-right: 8px;
+        }
+
+        .altHeader .phone-cta:hover {
+            background-color: #e64a19;
+            /* Darker shade on hover */
+        }
+
+        .altHeader .badges {
+            display: flex;
+            align-items: center;
+        }
+
+        .altHeader .badge-icon {
+            height: 65px;
+            margin-left: 10px;
+        }
+
+        .altHeader .badge-icon.gas-safe {
+            /* Optional: Add specific styling for Gas Safe icon if needed */
+        }
+
+        .altHeader .badge-icon.whatsapp {
+            /* Optional: Add specific styling for WhatsApp icon if needed */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .altHeader .container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .altHeader .logo-area {
+                margin-bottom: 10px;
+                flex-direction: column;
+            }
+
+            .altHeader .logo {
+                margin-right: 0;
+                margin-bottom: 5px;
+            }
+
+            .altHeader .cta-area {
+                flex-direction: column;
+                margin-top: 15px;
+            }
+
+            .altHeader .phone-cta {
+                margin-right: 0;
+                margin-bottom: 10px;
+                width: 100%;
+                /* Make button full width on smaller screens */
+                justify-content: center;
+                /* Center the text and icon */
+            }
+
+            .altHeader .badges {
+                margin-top: 10px;
+            }
+
+            .altHeader .badge-icon {
+                margin-left: 5px;
+            }
+        }
+
+
+
+
+
+        .brandSec .wave-underline {
+            content: "";
+            display: block;
+            height: 6px;
+            width: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 10" xmlns="http://www.w3.org/2000/svg"><path d="M0,5 C25,10 75,0 100,5" stroke="%23007BFF" fill="transparent" stroke-width="2"/></svg>');
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-top: 5px;
+        }
+
+        .brand-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .brand-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .hoverbtn:hover {
+            background-color: #ff5722;
+            border: 1px solid white;
+        }
+
+        .hoverbtn2:hover {
+            background: transparent;
+            border: 2px solid white;
+            color: black;
+        }
+
+        .hoverbtn2 {
+            background-color: #ff5722;
+            color: white;
+        }
+
+
+        /***logo ***/
+
+        .itemImgCom {
+            background: rgba(255, 255, 255, 225);
+            backdrop-filter: blur(8px);
+            border-radius: 1rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            filter: grayscale(100%);
+        }
+
+        .itemImgCom:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+            filter: grayscale(0%);
+        }
+
+        .owl-carousel .item img {
+            max-height: 100px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .compLO .owl-dots {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .compLO .owl-dot {
+            width: 12px;
+            height: 12px;
+            background: #ccc;
+            display: inline-block;
+            margin: 0 5px;
+            border-radius: 50%;
+            transition: background 0.3s;
+        }
+
+        .compLO .owl-dot.active {
+            background: #ff5722;
+        }
+.map-container {
+    position: relative;
+}
+
+.map-container img {
+    width: 100%;
+}
+
+/* Map Pins */
+.map-pin {
+    position: absolute;
+    transform: translate(-50%, -100%);
+    text-align: center;
+}
+
+.map-pin i {
+    font-size: 22px;
+    color: #ec6425;
+    display: block;
+}
+
+.map-pin span {
+    background: #fff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* Area list */
+.area-list li {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.area-list i {
+    color: #ec6425;
+    margin-right: 8px;
+}
+        .bann_sec h1 {
+            font-size: 2.7rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .glass-bg {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 16px;
+            padding: 30px;
+        }
+        .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #FF5722;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #e64a19; /* slightly darker shade */
+  transform: translateY(-2px);
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
+
+.map-container {
+  position: relative;
+}
+
+.map-pin {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  text-align: center;
+  cursor: pointer;
+  animation: float 3s ease-in-out infinite;
+}
+
+.map-pin i {
+  color: #FF5722;
+  font-size: 22px;
+  animation: pulse 1.5s infinite;
+}
+
+/* Label styling */
+.map-pin span {
+  display: block;
+  background: #fff;
+  color: #333;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 20px;
+  margin-top: 5px;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.3s ease;
+}
+
+/* Show label on hover */
+.map-pin span {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: #fff;
+  color: #333;
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.map-pin:hover span {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.map-pin span::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translate(-50%, -100%) translateY(0); }
+  50% { transform: translate(-50%, -100%) translateY(-6px); }
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* SECTION */
+.areas-covered {
+  overflow: hidden;
+}
+
+/* MAP */
+.map-container {
+  position: relative;
+}
+
+.map-container img {
+  border-radius: 10px;
+}
+
+/* 🎯 MAP PINS UPDATED */
+
+/* 🎯 INDIVIDUAL POSITION FIXES */
+
+/* Manchester */
+.pin1 span {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Prestwich */
+.pin2 span {
+  left: 0;
+  transform: translateX(-20%);
+}
+
+/* Whitefield */
+.pin3 span {
+  left: 100%;
+  transform: translateX(-80%);
+}
+
+/* Salford */
+.pin4 span {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Broughton Park */
+.pin5 span {
+  left: 100%;
+  transform: translateX(-70%);
+}
+
+/* Crumpsall */
+.pin6 span {
+  left: 0;
+  transform: translateX(-10%);
+}
+
+/* 🎯 INDIVIDUAL POSITION FIXES REMOVED - COORDINATES UPDATED IN HTML */
+    </style>
+</head>
+
+<body class="">
+    <header class="altHeader">
+        <div class="container">
+            <div class="logo-area">
+                <a href="/" class="logo-link">
+                    <img src="images/logo (2).png" alt="G-TEC Logo" class="logo" />
+                </a>
+            </div>
+            <p class="tagline">Central Heating <span>Manchester</span></p>
+
+            <div class="cta-area">
+
+                <div class="badges">
+                    <img src="images/gassafe.png" alt="Gas Safe" class="badge-icon gas-safe" />
+                    <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" class="whatsapp-link">
+                        <img src="images/WhatsApp Image 2025-02-22 at 15.35.17_0167e07f.png" alt="WhatsApp"
+                            class="badge-icon whatsapp" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2nd Sec  -->
+    <section class="bann_sec" id="forQuotebann">
+        <div class="container">
+            <div class="col-lg-6 text-white" style="position: relative; z-index: 2;">
+                <h5 class="text-uppercase font-weight-bold">24/7 Expert Care</h5>
+                <h1 class="">
+                    G-Tec – Keeping Manchester Warm, One Pipe At A Time!
+                </h1>
+                <p class="lead" style="color: white; font-weight: 400">
+                    Professional plumbing and heating services you can rely on. Our
+                    experts provide quality, affordable services to keep your home
+                    comfortable.
+                </p>
+                <div class="d-flex gap-3">
+                    <a href="tel:+447843277711" class="btn btn-warning btn-lg mt-4">07843 277 711</a>
+                    <a href="tel:01617925446" class="btn btn-warning btn-lg mt-4">0161 792 5446</a>
+                </div>
+            </div>
+
+            <!-- Form Section -->
+            <div class="col-lg-4 bannRow_2" style="position: relative; z-index: 2;">
+                <div class="formDivv shadow">
+                    <div class="frmHead text-center">
+                        <h2>Book Your <span>Appointment</span></h2>
+                    </div>
+                    <form id="serviceForm" class="p-4" onsubmit="return validateForm(event)">
+                        <input type="text" id="name" class="form-control mb-3" placeholder="Enter Your Name" />
+                        <input type="email" id="email" class="form-control mb-3" placeholder="Enter Your Email" />
+                        <input type="tel" id="request_phone" class="form-control mb-3"
+                            placeholder="Enter Your Phone Number" />
+                        <select id="request_service" class="form-select mb-3">
+                            <option value="">Select Your Service</option>
+                            <option>Boiler Repair</option>
+                            <option>Boiler Installation</option>
+                            <option>Unvented Hot Water</option>
+                            <option>Central heating</option>
+                        </select>
+                        <button type="submit">Submit Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Trust Bar / Brands Strip -->
+  
+
+    <div class="brand-strip py-5" style="background-color: #eaeaea;">
+        <div class="container">
+
+            <div class="row align-items-stretch">
+
+                <!-- Left Image -->
+                <div class="col-md-6 d-flex align-items-center justify-content-center bg-white">
+                    <img src="images/hero-branding.jpg" alt="Trusted Plumbing Services" class="img-fluid"
+                        style="max-height: 100%; object-fit: contain;">
+                </div>
+
+                <!-- Right Content -->
+                <div class="col-md-6 d-flex">
+                    <div class="p-4 d-flex flex-column justify-content-center w-100">
+
+                        <h3 class="fw-bold mb-3" style="color:#ff5722;">
+                            Trusted Plumbing Experts
+                        </h3>
+
+                        <p class="text-muted">
+                            We provide reliable and professional plumbing services for homes and businesses.
+                        </p>
+
+                        <ul class="list-unstyled mb-3">
+                            <li class="mb-2">
+                                <i class="fa-solid fa-circle-check me-2" style="color:#ff5722;"></i>
+                                24/7 Emergency Plumbing
+                            </li>
+                            <li class="mb-2">
+                                <i class="fa-solid fa-wrench me-2" style="color:#ff5722;"></i>
+                                Leak Detection & Repairs
+                            </li>
+                            <li class="mb-2">
+                                <i class="fa-solid fa-screwdriver-wrench me-2" style="color:#ff5722;"></i>
+                                Installation Services
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-sterling-sign me-2" style="color:#ff5722;"></i>
+                                Affordable Pricing
+                            </li>
+                        </ul>
+
+                        <a href="#" class="btn mt-3" style="background:#ff5722; color:#fff;">
+                            Book a Service
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+  <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center py-5">
+                <h2 class="fw-bold display-5" style="color: #343a40">
+                    We work on all brands
+                </h2>
+                <p class="lead text-secondary">
+                    We collaborate with industry-leading brands to bring you the best in
+                    plumbing and heating solutions.
+                </p>
+                <hr class="my-4" style="border-top: 2px solid #d8561f" />
+            </div>
+
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4 align-items-stretch justify-content-center">
+                <div class="col">
+                    <div class="p-3 bg-white shadow-sm rounded-3 d-flex align-items-center justify-content-center"
+                        style="height: 120px">
+                        <img src="images/gtCom_1.png" alt="Samsung" class="img-fluid"
+                            style="max-height: 80px; max-width: 100%; object-fit: contain" />
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3 bg-white shadow-sm rounded-3 d-flex align-items-center justify-content-center"
+                        style="height: 120px">
+                        <img src="images/gtCom_2.png" alt="Viessmann" class="img-fluid"
+                            style="max-height: 80px; max-width: 100%; object-fit: contain" />
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3 bg-white shadow-sm rounded-3 d-flex align-items-center justify-content-center"
+                        style="height: 120px">
+                        <img src="images/gtCom_3.png" alt="Vaillant" class="img-fluid"
+                            style="max-height: 80px; max-width: 100%; object-fit: contain" />
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3 bg-white shadow-sm rounded-3 d-flex align-items-center justify-content-center"
+                        style="height: 120px">
+                        <img src="images/gtCom_4.png" alt="Worcester Bosch" class="img-fluid"
+                            style="max-height: 80px; max-width: 100%; object-fit: contain" />
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3 bg-white shadow-sm rounded-3 d-flex align-items-center justify-content-center"
+                        style="height: 120px">
+                        <img src="images/gtCom_5.png" alt="Honeywell" class="img-fluid"
+                            style="max-height: 80px; max-width: 100%; object-fit: contain" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+       <section class="BoookSec py-5 text-center bg-light">
+        <div class="container">
+            <div class="bkHead mb-5">
+                <h2 class="fw-bold display-5">
+                    How To <span style="color: #ec6425">Book Us</span>?
+                </h2>
+                <p class="text-muted fs-5">
+                    Book your appointment through these simple steps
+                </p>
+            </div>
+
+            <div class="row g-5 justify-content-center">
+                <!-- Step 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="step-card position-relative p-4 rounded-4 h-100 bg-white border-orange shadow-orange">
+                        <div class="step-icon mb-3 mx-auto position-relative">
+                            <img src="images/bookGtec_1.jpg" alt="Step 1" class="rounded-circle shadow" />
+                            <span class="step-number">1</span>
+                        </div>
+                        <h5 class="fw-bold">Fill Up The Form</h5>
+                        <p class="text-muted">
+                            Provide your details through our easy-to-use online form.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="step-card position-relative p-4 rounded-4 h-100 bg-white border-orange shadow-orange">
+                        <div class="step-icon mb-3 mx-auto position-relative">
+                            <img src="images/boilerins.jpg" alt="Step 2" class="rounded-circle shadow" />
+                            <span class="step-number">2</span>
+                        </div>
+                        <h5 class="fw-bold">Select Your Service</h5>
+                        <p class="text-muted">
+                            Choose the service that suits your needs from our offerings.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="step-card position-relative p-4 rounded-4 h-100 bg-white border-orange shadow-orange">
+                        <div class="step-icon mb-3 mx-auto position-relative">
+                            <img src="images/bookGtec_3.jpg" alt="Step 3" class="rounded-circle shadow" />
+                            <span class="step-number">3</span>
+                        </div>
+                        <h5 class="fw-bold">Our Experts Will Call You</h5>
+                        <p class="text-muted">
+                            Relax while our team reaches out to confirm your appointment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="" style=" width:96vw;">
+        <div class="container my-5">
+            <div class="row g-4">
+                <!-- FAQ Section -->
+                <div class="col-md-6">
+                    <h3><strong>Heating & Cooling</strong> <span style="color:#ff5722">FAQ</span></h3>
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item border-0 rounded-4 shadow-sm mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button rounded-4" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq1" aria-expanded="true">
+                                    What is the life expectancy of my HVAC system?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    How often you run your system, the system’s age, its make and model, and regular
+                                    servicing all affect
+                                    life expectancy. Typically 15 years.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item border-0 rounded-4 shadow-sm mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed rounded-4" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    What brands do you install?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">We install top HVAC brands including Carrier, Trane, Lennox,
+                                    and more.</div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item border-0 rounded-4 shadow-sm mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed rounded-4" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    What is a heat pump?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">A heat pump provides both heating and cooling by
+                                    transferring heat in/out of
+                                    your home.</div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item border-0 rounded-4 shadow-sm mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed rounded-4" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    What is a heat pump?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">A heat pump provides both heating and cooling by
+                                    transferring heat in/out of
+                                    your home.</div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item border-0 rounded-4 shadow-sm mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed rounded-4" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    What is a heat pump?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">A heat pump provides both heating and cooling by
+                                    transferring heat in/out of
+                                    your home.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Form Section -->
+                <div class="col-md-6">
+                    <h3><strong>Ask</strong> <span style="color:#ff5722">Question</span></h3>
+                    <div class="card rounded-4 shadow-sm p-4" id="form">
+                        <form>
+                            <div class="row g-3">
+                                <!-- First Name and Last Name -->
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control rounded-pill border-secondary-subtle"
+                                        placeholder="First Name">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control rounded-pill border-secondary-subtle"
+                                        placeholder="Last Name">
+                                </div>
+
+                                <!-- Phone Number and Email -->
+                                <div class="col-md-6">
+                                    <input type="tel" class="form-control rounded-pill border-secondary-subtle"
+                                        placeholder="Phone Number">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control rounded-pill border-secondary-subtle"
+                                        placeholder="Email">
+                                </div>
+
+                                <!-- Service Dropdown -->
+                                <div class="col-12">
+                                    <select class="form-select rounded-pill border-secondary-subtle">
+                                        <option selected>Choose service...</option>
+                                        <option value="1">Boiler Repair</option>
+                                        <option value="2">Boiler Installation</option>
+                                        <option value="1">Unvented Hot Water</option>
+                                        <option value="2">Central heating</option>
+                                    </select>
+                                </div>
+
+                                <!-- Question Textarea -->
+                                <div class="col-12">
+                                    <textarea rows="4" class="form-control rounded-4 border-secondary-subtle"
+                                        placeholder="Your Question"></textarea>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <div class="col-12 text-center mt-5">
+                                    <button type="submit" class="btn fw-bold text-white px-4 py-2 shadow"
+                                        style="background-color: #ff5722; border-radius: 30px;">
+                                        Submit Now
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Brands  -->
+
+
+
+ 
+    <!-- ************** 4th Sec  -->
+    <section class="expSec pb-5 text-white" style="
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url('https://images.unsplash.com/photo-1669920282730-ab422e592f97?q=80&w=2082&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
+            no-repeat center center / cover;
+      ">
+        <div class="container">
+            <div class="bkHead bkHead_1 text-center my-5">
+                <h2 class="fw-bold display-5">
+                    <span style="color: #ec6425">Expert Plumbing</span> Solutions
+                </h2>
+                <p class="fs-5 text-white-50">
+                    Reliable & Fast Service - 24/7 Emergency Repairs
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Card Example -->
+                <div class="col-lg-3 col-md-6">
+                    <div
+                        class="expCard card border-0 rounded-3 shadow-lg h-100 overflow-hidden position-relative bg-gradient custom-card">
+                        <div class="position-relative">
+                            <img src="images/boilerrapir.jpg" class="card-img-top rounded-top-3 custom-card-img"
+                                alt="Commercial Plumbing" />
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column justify-content-between">
+                            <h5 class="fw-bold text-white mb-3 custom-card-title">
+                                <i class="bi bi-tools"></i> Boiler Repair
+
+                            </h5>
+                            <p class="card-text text-white-50 small mb-4">
+                                Skilled specialists delivering prompt and efficient boiler repairs to ensure reliable
+                                heating and system
+                                performance.
+                            </p>
+
+                            <a href="#form" class="btn btn-light w-100 rounded-pill fw-semibold shadow-sm hover-btn">
+                                Book Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div
+                        class="expCard card border-0 rounded-3 shadow-lg h-100 overflow-hidden position-relative bg-gradient custom-card">
+                        <div class="position-relative">
+                            <img src="images/newboilerinstallationpage.jpg"
+                                class="card-img-top rounded-top-3 custom-card-img" alt="Commercial Plumbing" />
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column justify-content-between">
+                            <h5 class="fw-bold text-white mb-3 custom-card-title">
+                                <i class="bi bi-tools"></i> Boiler Installation
+                            </h5>
+                            <p class="card-text text-white-50 small mb-4">
+                                Expert boiler installation services ensuring safe setup, optimal performance, and
+                                long-lasting heating
+                                efficiency.
+                            </p>
+
+                            <a href="#form" class="btn btn-light w-100 rounded-pill fw-semibold shadow-sm hover-btn">
+                                Book Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div
+                        class="expCard card border-0 rounded-3 shadow-lg h-100 overflow-hidden position-relative bg-gradient custom-card">
+                        <div class="position-relative">
+                            <img src="images/hot3.jpg" class="card-img-top rounded-top-3 custom-card-img"
+                                alt="Commercial Plumbing" />
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column justify-content-between">
+                            <h5 class="fw-bold text-white mb-3 custom-card-title">
+                                <i class="bi bi-tools"></i> Unvented Hot Water
+                            </h5>
+                            <p class="card-text text-white-50 small mb-4">
+                                Specialized unvented hot water services for efficient installation, maintenance, and
+                                repairs in your
+                                home.
+                            </p>
+                            <a href="#form" class="btn btn-light w-100 rounded-pill fw-semibold shadow-sm hover-btn">
+                                Book Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div
+                        class="expCard card border-0 rounded-3 shadow-lg h-100 overflow-hidden position-relative bg-gradient custom-card">
+                        <div class="position-relative">
+                            <img src="images/centralheating.jfif" class="card-img-top rounded-top-3 custom-card-img"
+                                alt="Commercial Plumbing" />
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column justify-content-between">
+                            <h5 class="fw-bold text-white mb-3 custom-card-title">
+                                <i class="bi bi-tools"></i>Central heating
+                            </h5>
+                            <p class="card-text text-white-50 small mb-4">
+                                Reliable central heating services in Manchester for efficient installations, repairs,
+                                and maintenance to
+                                ensure warmth.
+                            </p>
+                            <a href="#form" class="btn btn-light w-100 rounded-pill fw-semibold shadow-sm hover-btn">
+                                Book Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-4 text-center " style="background-color:black">
+        <div class="container-fluid">
+            <div class="owl-carousel owl-theme">
+                <div class="item p-3">
+                    <div class="itemImgCom p-4">
+                        <img src="images/GTitem_1.png" alt="Brand 1" class="w-100" />
+                    </div>
+                </div>
+                <div class="item p-3">
+                    <div class="itemImgCom p-4">
+                        <img src="images/GTitem_2.png" alt="Brand 2" class="w-100" />
+                    </div>
+                </div>
+                <div class="item p-3">
+                    <div class="itemImgCom p-4">
+                        <img src="images/GTitem_3.png" alt="Brand 3" class="w-100" />
+                    </div>
+                </div>
+                <div class="item p-3">
+                    <div class="itemImgCom p-4">
+                        <img src="images/GTitem_4.png" alt="Brand 4" class="w-100" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5th sec  -->
+
+    <section class="bg-white py-5 position-relative why-gtec" style="
+        background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(0, 0,0, 0.6)),
+          url('https://kyletest.in/bsk/assets/img/serv-back.png')
+            no-repeat center center / cover;
+      ">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <!-- Left Image Section -->
+                <div class="col-md-6 d-flex justify-content-center">
+                    <div class="rounded overflow-hidden shadow" style="
+                max-height: 600px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              ">
+                        <img src="images/chosIMGGG.jpg" alt="Why Choose G-Tec" class="img-fluid w-100 h-100"
+                            style="object-fit: cover; border-radius: 10px" />
+                    </div>
+                </div>
+
+                <!-- Right Content -->
+                <div class="col-md-6" style="
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(225, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+" ">
+            <h2 class=" fw-bold mb-3">
+                    Why <span style="color: #d8561f">Choose Us</span>?
+                    </h2>
+                    <h5 class="mb-4 text-black">
+                        Manchester’s Trusted Plumbing & Heating Experts
+                    </h5>
+                    <p class="mb-3 text-black">
+                        At G-Tec, we’re committed to providing expert plumbing and heating
+                        services that keep your home comfortable, safe, and efficient.
+                        Whether it’s urgent repairs or a full system installation, we’ve
+                        got you covered.
+                    </p>
+                    <p class="text-black">
+                        We believe in honest service, lasting results, and transparent
+                        pricing — all backed by certified technicians and the latest tools
+                        in the industry.
+                    </p>
+
+                    <!-- Features List -->
+                    <ul class="list-unstyled mt-4">
+                        <li class="d-flex align-items-start mb-3">
+
+                            <div>
+                                <strong>Expert Technicians</strong><br /><small class="text-muted">Certified
+                                    professionals ready for any
+                                    job.</small>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-start mb-3">
+
+                            <div>
+                                <strong>Quick Response</strong><br /><small class="text-muted">Emergency support, 24/7
+                                    availability.</small>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-start mb-3">
+
+                            <div>
+                                <strong>Transparent Pricing</strong><br /><small class="text-muted">No surprises, just
+                                    honest
+                                    quotes.</small>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-start">
+
+                            <div>
+                                <strong>Long-Term Solutions</strong><br /><small class="text-muted">Durable fixes built
+                                    to last.</small>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!-- Call to Action Buttons -->
+                    <div class="mt-4">
+                        <button class="btn me-2 hoverbtn2" onclick="window.location.href='tel:+441617925446';">
+                            0161 792 5446
+                        </button>
+                        <button class="btn hoverbtn" onclick="window.location.href='#form';"
+                            style="border: 2px solid #c9541f; color: white">
+                            GET A FREE QUOTATION
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Areas We Cover Section -->
+        <section class="areas-covered py-5 bg-white">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- LEFT SIDE MAP -->
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="map-container">
+
+                    <img src="images/map.jpg" class="img-fluid w-100" alt="Map">
+
+                    <!-- Pins -->
+                    <div class="map-pin pin1" style="top:65%; left:63%;">
+    <i class="fa-solid fa-location-dot"></i>
+    <span>City Centre</span>
+</div>
+
+<div class="map-pin pin2" style="top:32%; left:51%;">
+    <i class="fa-solid fa-location-dot"></i>
+    <span>Prestwich</span>
+</div>
+
+<div class="map-pin pin3" style="top:17%; left:52%;">
+    <i class="fa-solid fa-location-dot"></i>
+    <span>Whitefield</span>
+</div>
+
+<div class="map-pin pin4" style="top:55%; left:40%;">
+    <i class="fa-solid fa-location-dot"></i>
+    <span>Salford</span>
+</div>
+
+<div class="map-pin pin5" style="top:45%; left:50%;">
+    <i class="fa-solid fa-location-dot"></i>
+    <span>Broughton Park</span>
+</div>
+
+<div class="map-pin pin6" style="top:38%; left:60%;">
+    <i class="fa-solid fa-location-dot"></i>
+    <span>Crumpsall</span>
+</div>
+
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE CONTENT -->
+            <div class="col-lg-6">
+                <div class="mb-4">
+                    <h2>
+                        Areas We <span class="text-orange">Serve</span>
+                    </h2>
+                    <p class="text-muted">
+                        We provide professional plumbing and heating services across <span style="font-weight:bold ; color:#FF5722">Manchester</span>  and surrounding areas.
+                    </p>
+                </div>
+
+                <ul class="area-list list-unstyled">
+                    <li><i class="fa-solid fa-check"></i>  City Centre</li>
+                    <li><i class="fa-solid fa-check"></i> Prestwich</li>
+                    <li><i class="fa-solid fa-check"></i> Whitefield</li>
+                    <li><i class="fa-solid fa-check"></i> Broughton Park</li>
+                    <li><i class="fa-solid fa-check"></i> Crumpsall</li>
+                    <li><i class="fa-solid fa-check"></i> Salford</li>
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+    <!--******** Footer ************-->
+    <footer>
+        <!-- Footer Section -->
+        <section class="foot_sec" style="background-color:white !important">
+            <div class="lasttt">
+                <div class="container">
+                    <div class="row flex-column align-items-center">
+
+
+                        <div class="sscc col-md-6 text-center">
+                            <p>
+                                GTEC Plumbers are available in Manchester City Centre. We also cover Prestwich Plumbing,
+                                Whitefield
+                                Plumbing, Broughton Park Plumbing & Crumpsall Plumbing needs.
+                            </p>
+                            <div class="lastt_socc d-flex justify-content-center gap-3">
+                                <a href="https://x.com/gtec38" class="social-icon"><i
+                                        class="fa-brands fa-x-twitter"></i></a>
+                                <a href="https://www.facebook.com/GtecGasSevices" class="social-icon"><i
+                                        class="ri-facebook-box-line"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Last Section -->
+        <div class="footLAst py-3">
+            <div class="container d-flex justify-content-center align-items-center gap-4">
+                <p class="footer-text">
+                    &copy; 2025 All Rights Reserved <a href="https://gtecplumbing.co.uk/">G-TEC PLUMBING SERVICES LTD</a>
+                </p>
+                <p class="footer-text">
+                    Designed & Developed by <a href="https://kyleinfotech.co.in/">Kyle Infotech</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function validateForm(event) {
+            let isValid = true;
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let phone = document.getElementById("request_phone").value.trim();
+            let service = document.getElementById("request_service").value;
+
+            if (name === "" || email === "" || phone === "" || service === "") {
+                alert("Please fill in all fields.");
+                isValid = false;
+            }
+
+            if (!isValid) event.preventDefault();
+            return isValid;
+        }
+    </script>
+</body>
+
+</html>
