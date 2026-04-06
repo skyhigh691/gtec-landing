@@ -712,3 +712,21 @@
 .areas-covered i {
     font-size: 24px;
 }
+
+brndsIMG img {
+    width: 100%;
+}
+
+.brandSec {
+    background-color: #f7f2ed;
+}
+
+.brandSec p {
+    color: #919191;
+}
+
+.logAnch_lsst img {
+    width: 45%;
+    margin: auto;
+    display: block;
+}
