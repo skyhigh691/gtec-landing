@@ -29,51 +29,52 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="./assets/style.css" />
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./assets/responsive.css" />
 
     <style>
- .map-container {
-    position: relative;
-}
+        .map-container {
+            position: relative;
+        }
 
-.map-container img {
-    width: 100%;
-}
+        .map-container img {
+            width: 100%;
+        }
 
-/* Map Pins */
-.map-pin {
-    position: absolute;
-    transform: translate(-50%, -100%);
-    text-align: center;
-}
+        /* Map Pins */
+        .map-pin {
+            position: absolute;
+            transform: translate(-50%, -100%);
+            text-align: center;
+        }
 
-.map-pin i {
-    font-size: 22px;
-    color: #ec6425;
-    display: block;
-}
+        .map-pin i {
+            font-size: 22px;
+            color: #ec6425;
+            display: block;
+        }
 
-.map-pin span {
-    background: #fff;
-    padding: 3px 8px;
-    border-radius: 5px;
-    font-size: 12px;
-    font-weight: 600;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-}
+        .map-pin span {
+            background: #fff;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: 600;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        }
 
-/* Area list */
-.area-list li {
-    margin-bottom: 10px;
-    font-weight: 500;
-}
+        /* Area list */
+        .area-list li {
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
 
-.area-list i {
-    color: #ec6425;
-    margin-right: 8px;
-}
+        .area-list i {
+            color: #ec6425;
+            margin-right: 8px;
+        }
+
         .bann_sec h1 {
             font-size: 2.7rem;
             font-weight: 700;
@@ -88,354 +89,393 @@
             border-radius: 16px;
             padding: 30px;
         }
+
         .btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #FF5722;
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: 500;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #FF5722;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
 
-.btn:hover {
-  background-color: #e64a19; /* slightly darker shade */
-  transform: translateY(-2px);
-}
+        .btn:hover {
+            background-color: #e64a19;
+            /* slightly darker shade */
+            transform: translateY(-2px);
+        }
 
-.mt-3 {
-  margin-top: 1rem;
-}
+        .mt-3 {
+            margin-top: 1rem;
+        }
 
-.map-container {
-  position: relative;
-}
+        .map-container {
+            position: relative;
+        }
 
-.map-pin {
-  position: absolute;
-  transform: translate(-50%, -100%);
-  text-align: center;
-  cursor: pointer;
-  animation: float 3s ease-in-out infinite;
-}
+        .map-pin {
+            position: absolute;
+            transform: translate(-50%, -100%);
+            text-align: center;
+            cursor: pointer;
+            animation: float 3s ease-in-out infinite;
+        }
 
-.map-pin i {
-  color: #FF5722;
-  font-size: 22px;
-  animation: pulse 1.5s infinite;
-}
+        .map-pin i {
+            color: #FF5722;
+            font-size: 22px;
+            animation: pulse 1.5s infinite;
+        }
 
-/* Label styling */
-.map-pin span {
-  display: block;
-  background: #fff;
-  color: #333;
-  padding: 4px 10px;
-  font-size: 12px;
-  border-radius: 20px;
-  margin-top: 5px;
-  white-space: nowrap;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  opacity: 0;
-  transform: translateY(10px);
-  transition: 0.3s ease;
-}
+        /* Label styling */
+        .map-pin span {
+            display: block;
+            background: #fff;
+            color: #333;
+            padding: 4px 10px;
+            font-size: 12px;
+            border-radius: 20px;
+            margin-top: 5px;
+            white-space: nowrap;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(10px);
+            transition: 0.3s ease;
+        }
 
-/* Show label on hover */
-.map-pin span {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%) translateY(10px);
-  background: #fff;
-  color: #333;
-  padding: 6px 12px;
-  font-size: 12px;
-  border-radius: 20px;
-  white-space: nowrap;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  z-index: 10;
-}
+        /* Show label on hover */
+        .map-pin span {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            background: #fff;
+            color: #333;
+            padding: 6px 12px;
+            font-size: 12px;
+            border-radius: 20px;
+            white-space: nowrap;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
 
-.map-pin:hover span {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(-50%) translateY(0);
-}
+        .map-pin:hover span {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
 
-.map-pin span::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-width: 5px;
-  border-style: solid;
-  border-color: #fff transparent transparent transparent;
-}
+        .map-pin span::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 5px;
+            border-style: solid;
+            border-color: #fff transparent transparent transparent;
+        }
 
-/* Floating animation */
-@keyframes float {
-  0%, 100% { transform: translate(-50%, -100%) translateY(0); }
-  50% { transform: translate(-50%, -100%) translateY(-6px); }
-}
+        /* Floating animation */
+        @keyframes float {
 
-/* Pulse animation */
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-  100% { transform: scale(1); }
-}
+            0%,
+            100% {
+                transform: translate(-50%, -100%) translateY(0);
+            }
 
-/* SECTION */
-.areas-covered {
-  overflow: hidden;
-}
+            50% {
+                transform: translate(-50%, -100%) translateY(-6px);
+            }
+        }
 
-/* MAP */
-.map-container {
-  position: relative;
-}
+        /* Pulse animation */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
 
-.map-container img {
-  border-radius: 10px;
-}
+            50% {
+                transform: scale(1.2);
+            }
 
-/* 🎯 MAP PINS UPDATED */
+            100% {
+                transform: scale(1);
+            }
+        }
 
-/* 🎯 INDIVIDUAL POSITION FIXES */
+        /* SECTION */
+        .areas-covered {
+            overflow: hidden;
+        }
 
-/* Manchester */
-.pin1 span {
-  left: 50%;
-  transform: translateX(-50%);
-}
+        /* MAP */
+        .map-container {
+            position: relative;
+        }
 
-/* Prestwich */
-.pin2 span {
-  left: 0;
-  transform: translateX(-20%);
-}
+        .map-container img {
+            border-radius: 10px;
+        }
 
-/* Whitefield */
-.pin3 span {
-  left: 100%;
-  transform: translateX(-80%);
-}
+        /* 🎯 MAP PINS UPDATED */
 
-/* Salford */
-.pin4 span {
-  left: 50%;
-  transform: translateX(-50%);
-}
+        /* 🎯 INDIVIDUAL POSITION FIXES */
 
-/* Broughton Park */
-.pin5 span {
-  left: 100%;
-  transform: translateX(-70%);
-}
+        /* Manchester */
+        .pin1 span {
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
-/* Crumpsall */
-.pin6 span {
-  left: 0;
-  transform: translateX(-10%);
-}
-/* 🎯 INDIVIDUAL POSITION FIXES REMOVED - COORDINATES UPDATED IN HTML */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  color: #222;
-  margin-bottom: 10px;
-}
+        /* Prestwich */
+        .pin2 span {
+            left: 0;
+            transform: translateX(-20%);
+        }
 
-/* OPTIONAL: Fine tuning sizes */
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.6rem; }
-h4 { font-size: 1.3rem; }
-h5 { font-size: 1.1rem; }
-h6 { font-size: 1rem; }
+        /* Whitefield */
+        .pin3 span {
+            left: 100%;
+            transform: translateX(-80%);
+        }
 
-.brands-section1 {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-}
+        /* Salford */
+        .pin4 span {
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
-.brands-wrapper1 {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-}
+        /* Broughton Park */
+        .pin5 span {
+            left: 100%;
+            transform: translateX(-70%);
+        }
 
-.section-heading1 {
-    position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 2.5rem;
-}
+        /* Crumpsall */
+        .pin6 span {
+            left: 0;
+            transform: translateX(-10%);
+        }
 
-.accent-border1 {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 4px;
-    background: linear-gradient(to bottom, #f86300, #4e2503);
-}
+        /* 🎯 INDIVIDUAL POSITION FIXES REMOVED - COORDINATES UPDATED IN HTML */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 10px;
+        }
 
-.gradient-text1 {
-    background: linear-gradient(45deg, #0d6efd, #00b4ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    margin-bottom: 1rem;
-}
+        /* OPTIONAL: Fine tuning sizes */
+        h1 {
+            font-size: 2.5rem;
+        }
 
-.brands-subtext1 {
-    color: #495057;
-    max-width: 600px;
-    line-height: 1.6;
-}
+        h2 {
+            font-size: 2rem;
+        }
 
-.brand-grid1 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 1.5rem;
-    padding: 1rem;
-    width: 1300px;
-}
+        h3 {
+            font-size: 1.6rem;
+        }
 
-.brand-card1 {
-    background: white;
-    border-radius: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    padding: 1.5rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-}
+        h4 {
+            font-size: 1.3rem;
+        }
 
-.brand-card1:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(13, 110, 253, 0.15);
-}
+        h5 {
+            font-size: 1.1rem;
+        }
 
-.brand-logo1 {
-    width: 100%;
-    height: auto;
+        h6 {
+            font-size: 1rem;
+        }
 
-    transition: filter 0.3s ease;
-}
+        .brands-section1 {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
 
-.brand-card1:hover .brand-logo1 {
-    filter: grayscale(0);
-}
+        .brands-wrapper1 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
 
-@media (min-width: 768px) {
-    .brands-wrapper1 {
-        grid-template-columns: 1fr 1.2fr;
-        align-items: center;
-    }
+        .section-heading1 {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
 
-    .section-heading1 {
-        padding-left: 2rem;
-        margin-bottom: 0;
-    }
-}
+        .accent-border1 {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(to bottom, #f86300, #4e2503);
+        }
 
-/**** Brands*****/
+        .gradient-text1 {
+            background: linear-gradient(45deg, #0d6efd, #00b4ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+        }
 
-.brands-section {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-}
+        .brands-subtext1 {
+            color: #495057;
+            max-width: 600px;
+            line-height: 1.6;
+        }
 
-.brands-wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-}
+        .brand-grid1 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 1.5rem;
+            padding: 1rem;
+            width: 1300px;
+        }
 
-.section-heading {
-    position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 2.5rem;
-}
+        .brand-card1 {
+            background: white;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
 
-.accent-border {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 4px;
-    background: linear-gradient(to bottom, #f86300, #4e2503);
-}
+        .brand-card1:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(13, 110, 253, 0.15);
+        }
 
-.gradient-text {
-    background: linear-gradient(45deg, #0d6efd, #00b4ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    margin-bottom: 1rem;
-}
+        .brand-logo1 {
+            width: 100%;
+            height: auto;
 
-.brands-subtext {
-    color: #495057;
-    max-width: 600px;
-    line-height: 1.6;
-}
+            transition: filter 0.3s ease;
+        }
 
-.brand-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 1.5rem;
-    padding: 1rem;
-    width: 1200px;
-}
+        .brand-card1:hover .brand-logo1 {
+            filter: grayscale(0);
+        }
 
-.brand-card {
-    background: white;
-    border-radius: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    padding: 1.5rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-}
+        @media (min-width: 768px) {
+            .brands-wrapper1 {
+                grid-template-columns: 1fr 1.2fr;
+                align-items: center;
+            }
 
-.brand-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(13, 110, 253, 0.15);
-}
+            .section-heading1 {
+                padding-left: 2rem;
+                margin-bottom: 0;
+            }
+        }
 
-.brand-logo {
-    width: 100%;
-    height: auto;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease;
-}
+        /**** Brands*****/
 
-.brand-card:hover .brand-logo {
-    filter: grayscale(0);
-}
+        .brands-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
 
-@media (min-width: 768px) {
-    .brands-wrapper {
-        grid-template-columns: 1fr 1.2fr;
-        align-items: center;
-    }
+        .brands-wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
 
-    .section-heading {
-        padding-left: 2rem;
-        margin-bottom: 0;
-    }
-}
+        .section-heading {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
 
+        .accent-border {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(to bottom, #f86300, #4e2503);
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, #0d6efd, #00b4ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .brands-subtext {
+            color: #495057;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .brand-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 1.5rem;
+            padding: 1rem;
+            width: 1200px;
+        }
+
+        .brand-card {
+            background: white;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .brand-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(13, 110, 253, 0.15);
+        }
+
+        .brand-logo {
+            width: 100%;
+            height: auto;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        .brand-card:hover .brand-logo {
+            filter: grayscale(0);
+        }
+
+        @media (min-width: 768px) {
+            .brands-wrapper {
+                grid-template-columns: 1fr 1.2fr;
+                align-items: center;
+            }
+
+            .section-heading {
+                padding-left: 2rem;
+                margin-bottom: 0;
+            }
+        }
     </style>
 </head>
 
@@ -517,64 +557,64 @@ h6 { font-size: 1rem; }
             </div>
     </section>
 
-     <section class="chosSec position-relative py-5">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-6 chosRow_1">
-                
-                <h2>
-                    <span>G-Tec - Manchester's</span> Underfloor Heating Specialists
-                </h2>
+    <section class="chosSec position-relative py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 chosRow_1">
 
-                <p>
-                    G-Tec provides professional underfloor heating installation and repair
-                    services across Manchester, helping homeowners enjoy efficient,
-                    evenly distributed warmth all year round. Whether you're upgrading
-                    your current system or installing a new one, we deliver reliable
-                    solutions tailored to your needs.
-                </p>
+                    <h2>
+                        <span>G-Tec - Manchester's</span> Underfloor Heating Specialists
+                    </h2>
 
-                <p>
-                    Our experienced engineers use high-quality materials and the latest
-                    technology to ensure optimal performance and energy efficiency.
-                    From design and installation to maintenance and repairs, we offer
-                    cost-effective underfloor heating services you can trust.
-                </p>
+                    <p>
+                        G-Tec provides professional underfloor heating installation and repair
+                        services across Manchester, helping homeowners enjoy efficient,
+                        evenly distributed warmth all year round. Whether you're upgrading
+                        your current system or installing a new one, we deliver reliable
+                        solutions tailored to your needs.
+                    </p>
 
-                <div class="choseType_dv">
-                    <div class="row">
-                        <div class="chseTyp_1 col-6 mt-3">
-                            <div class="chsTyp_img">
-                                <img src="images/plubChsTyp_1.png" class="w-100" alt="" />
+                    <p>
+                        Our experienced engineers use high-quality materials and the latest
+                        technology to ensure optimal performance and energy efficiency.
+                        From design and installation to maintenance and repairs, we offer
+                        cost-effective underfloor heating services you can trust.
+                    </p>
+
+                    <div class="choseType_dv">
+                        <div class="row">
+                            <div class="chseTyp_1 col-6 mt-3">
+                                <div class="chsTyp_img">
+                                    <img src="images/plubChsTyp_1.png" class="w-100" alt="" />
+                                </div>
+                                <h6>Certified Heating Experts</h6>
                             </div>
-                            <h6>Certified Heating Experts</h6>
-                        </div>
 
-                        <div class="chseTyp_1 col-6 mt-3">
-                            <div class="chsTyp_img">
-                                <img src="images/plubChsTyp_2.png" class="w-100" alt="" />
+                            <div class="chseTyp_1 col-6 mt-3">
+                                <div class="chsTyp_img">
+                                    <img src="images/plubChsTyp_2.png" class="w-100" alt="" />
+                                </div>
+                                <h6>Fast & Reliable Service</h6>
                             </div>
-                            <h6>Fast & Reliable Service</h6>
-                        </div>
 
-                       
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="chosIMGG">
+                        <img src="images/floorheat2.jpg" alt="Underfloor Heating Manchester" />
                     </div>
                 </div>
             </div>
-
-            <div class="col-md-6">
-                <div class="chosIMGG">
-                    <img src="images/floorheat2.jpg" alt="Underfloor Heating Manchester" />
-                </div>
-            </div>
         </div>
-    </div>
-     </section>
+    </section>
     <!-- Trust Bar / Brands Strip -->
     <!-- Trust Bar / Brands Strip -->
-<!-- Trust Bar / Brands Strip -->
+    <!-- Trust Bar / Brands Strip -->
 
-  
+
 
     <div class="brand-strip py-5" style="background-color: #eaeaea;">
         <div class="container">
@@ -814,7 +854,7 @@ h6 { font-size: 1rem; }
 
     <!-- 5th sec  -->
 
-  <section class="chosSec position-relative py-5">
+    <section class="chosSec position-relative py-5">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 chosRow_1">
@@ -880,7 +920,7 @@ h6 { font-size: 1rem; }
                 </div>
             </div>
         </div>
-     
+
     </section>
 
     <!-- Brands  -->
@@ -915,75 +955,76 @@ h6 { font-size: 1rem; }
     </section>
 
     <!-- Areas We Cover Section -->
-   <section class="areas-covered py-5 bg-white">
-    <div class="container">
-        <div class="row align-items-center">
+    <section class="areas-covered py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center">
 
-            <!-- LEFT SIDE MAP -->
-            <div class="col-lg-6 mb-4 mb-lg-0">
-                <div class="map-container">
+                <!-- LEFT SIDE MAP -->
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="map-container">
 
-                    <img src="images/map.jpg" class="img-fluid w-100" alt="Map">
+                        <img src="images/map.jpg" class="img-fluid w-100" alt="Map">
 
-                    <!-- Pins -->
-                    <div class="map-pin pin1" style="top:65%; left:63%;">
-    <i class="fa-solid fa-location-dot"></i>
-    <span>City Centre</span>
-</div>
+                        <!-- Pins -->
+                        <div class="map-pin pin1" style="top:65%; left:63%;">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>City Centre</span>
+                        </div>
 
-<div class="map-pin pin2" style="top:32%; left:51%;">
-    <i class="fa-solid fa-location-dot"></i>
-    <span>Prestwich</span>
-</div>
+                        <div class="map-pin pin2" style="top:32%; left:51%;">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Prestwich</span>
+                        </div>
 
-<div class="map-pin pin3" style="top:17%; left:52%;">
-    <i class="fa-solid fa-location-dot"></i>
-    <span>Whitefield</span>
-</div>
+                        <div class="map-pin pin3" style="top:17%; left:52%;">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Whitefield</span>
+                        </div>
 
-<div class="map-pin pin4" style="top:55%; left:40%;">
-    <i class="fa-solid fa-location-dot"></i>
-    <span>Salford</span>
-</div>
+                        <div class="map-pin pin4" style="top:55%; left:40%;">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Salford</span>
+                        </div>
 
-<div class="map-pin pin5" style="top:45%; left:50%;">
-    <i class="fa-solid fa-location-dot"></i>
-    <span>Broughton Park</span>
-</div>
+                        <div class="map-pin pin5" style="top:45%; left:50%;">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Broughton Park</span>
+                        </div>
 
-<div class="map-pin pin6" style="top:38%; left:60%;">
-    <i class="fa-solid fa-location-dot"></i>
-    <span>Crumpsall</span>
-</div>
+                        <div class="map-pin pin6" style="top:38%; left:60%;">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Crumpsall</span>
+                        </div>
 
-                </div>
-            </div>
-
-            <!-- RIGHT SIDE CONTENT -->
-            <div class="col-lg-6">
-                <div class="mb-4">
-                    <h2>
-                        Areas We <span class="text-orange">Serve</span>
-                    </h2>
-                    <p class="text-muted">
-                        We provide professional plumbing and heating services across <span style="font-weight:bold ; color:#FF5722">Manchester</span>  and surrounding areas.
-                    </p>
+                    </div>
                 </div>
 
-                <ul class="area-list list-unstyled">
-                    <li><i class="fa-solid fa-check"></i>  City Centre</li>
-                    <li><i class="fa-solid fa-check"></i> Prestwich</li>
-                    <li><i class="fa-solid fa-check"></i> Whitefield</li>
-                    <li><i class="fa-solid fa-check"></i> Broughton Park</li>
-                    <li><i class="fa-solid fa-check"></i> Crumpsall</li>
-                    <li><i class="fa-solid fa-check"></i> Salford</li>
-                </ul>
+                <!-- RIGHT SIDE CONTENT -->
+                <div class="col-lg-6">
+                    <div class="mb-4">
+                        <h2>
+                            Areas We <span class="text-orange">Serve</span>
+                        </h2>
+                        <p class="text-muted">
+                            We provide professional plumbing and heating services across <span
+                                style="font-weight:bold ; color:#FF5722">Manchester</span> and surrounding areas.
+                        </p>
+                    </div>
+
+                    <ul class="area-list list-unstyled">
+                        <li><i class="fa-solid fa-check"></i> City Centre</li>
+                        <li><i class="fa-solid fa-check"></i> Prestwich</li>
+                        <li><i class="fa-solid fa-check"></i> Whitefield</li>
+                        <li><i class="fa-solid fa-check"></i> Broughton Park</li>
+                        <li><i class="fa-solid fa-check"></i> Crumpsall</li>
+                        <li><i class="fa-solid fa-check"></i> Salford</li>
+                    </ul>
+
+                </div>
 
             </div>
-
         </div>
-    </div>
-</section>
+    </section>
     <!--******** Footer ************-->
     <footer>
         <section class="foot_sec">
@@ -1013,7 +1054,8 @@ h6 { font-size: 1rem; }
 
         <div class="footLAst py-2">
             <div class="container d-flex justify-content-center align-items-center gap-4">
-                <p>&copy; 2025 All Rights Reserved <a href="https://gtecplumbing.co.uk/">G-TEC PLUMBING SERVICES LTD</a></p>
+                <p>&copy; 2025 All Rights Reserved <a href="https://gtecplumbing.co.uk/">G-TEC PLUMBING SERVICES LTD</a>
+                </p>
                 <p>Designed & Developed by <a href="https://kyleinfotech.co.in/">Kyle Infotech</a></p>
             </div>
         </div>
