@@ -16,9 +16,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/style.css" />
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
         integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -33,49 +33,50 @@
 
     <style>
         body {
-  font-family: 'Poppins', sans-serif;
-}
+            font-family: 'Poppins', sans-serif;
+        }
 
-  .map-container {
-    position: relative;
-}
+        .map-container {
+            position: relative;
+        }
 
-.map-container img {
-    width: 100%;
-}
+        .map-container img {
+            width: 100%;
+        }
 
-/* Map Pins */
-.map-pin {
-    position: absolute;
-    transform: translate(-50%, -100%);
-    text-align: center;
-}
+        /* Map Pins */
+        .map-pin {
+            position: absolute;
+            transform: translate(-50%, -100%);
+            text-align: center;
+        }
 
-.map-pin i {
-    font-size: 22px;
-    color: #ec6425;
-    display: block;
-}
+        .map-pin i {
+            font-size: 22px;
+            color: #ec6425;
+            display: block;
+        }
 
-.map-pin span {
-    background: #fff;
-    padding: 3px 8px;
-    border-radius: 5px;
-    font-size: 12px;
-    font-weight: 600;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-}
+        .map-pin span {
+            background: #fff;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: 600;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        }
 
-/* Area list */
-.area-list li {
-    margin-bottom: 10px;
-    font-weight: 500;
-}
+        /* Area list */
+        .area-list li {
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
 
-.area-list i {
-    color: #ec6425;
-    margin-right: 8px;
-}
+        .area-list i {
+            color: #ec6425;
+            margin-right: 8px;
+        }
+
         .bann_sec h1 {
             font-size: 2.7rem;
             font-weight: 700;
@@ -90,163 +91,181 @@
             border-radius: 16px;
             padding: 30px;
         }
+
         .btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #FF5722;
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: 500;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #FF5722;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
 
-.btn:hover {
-  background-color: #e64a19; /* slightly darker shade */
-  transform: translateY(-2px);
-}
+        .btn:hover {
+            background-color: #e64a19;
+            /* slightly darker shade */
+            transform: translateY(-2px);
+        }
 
-.mt-3 {
-  margin-top: 1rem;
-}
+        .mt-3 {
+            margin-top: 1rem;
+        }
 
-.map-container {
-  position: relative;
-}
+        .map-container {
+            position: relative;
+        }
 
-.map-pin {
-  position: absolute;
-  transform: translate(-50%, -100%);
-  text-align: center;
-  cursor: pointer;
-  animation: float 3s ease-in-out infinite;
-}
+        .map-pin {
+            position: absolute;
+            transform: translate(-50%, -100%);
+            text-align: center;
+            cursor: pointer;
+            animation: float 3s ease-in-out infinite;
+        }
 
-.map-pin i {
-  color: #FF5722;
-  font-size: 22px;
-  animation: pulse 1.5s infinite;
-}
+        .map-pin i {
+            color: #FF5722;
+            font-size: 22px;
+            animation: pulse 1.5s infinite;
+        }
 
-/* Label styling */
-.map-pin span {
-  display: block;
-  background: #fff;
-  color: #333;
-  padding: 4px 10px;
-  font-size: 12px;
-  border-radius: 20px;
-  margin-top: 5px;
-  white-space: nowrap;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  opacity: 0;
-  transform: translateY(10px);
-  transition: 0.3s ease;
-}
+        /* Label styling */
+        .map-pin span {
+            display: block;
+            background: #fff;
+            color: #333;
+            padding: 4px 10px;
+            font-size: 12px;
+            border-radius: 20px;
+            margin-top: 5px;
+            white-space: nowrap;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(10px);
+            transition: 0.3s ease;
+        }
 
-/* Show label on hover */
-.map-pin span {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%) translateY(10px);
-  background: #fff;
-  color: #333;
-  padding: 6px 12px;
-  font-size: 12px;
-  border-radius: 20px;
-  white-space: nowrap;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  z-index: 10;
-}
+        /* Show label on hover */
+        .map-pin span {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            background: #fff;
+            color: #333;
+            padding: 6px 12px;
+            font-size: 12px;
+            border-radius: 20px;
+            white-space: nowrap;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
 
-.map-pin:hover span {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(-50%) translateY(0);
-}
+        .map-pin:hover span {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
 
-.map-pin span::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-width: 5px;
-  border-style: solid;
-  border-color: #fff transparent transparent transparent;
-}
+        .map-pin span::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 5px;
+            border-style: solid;
+            border-color: #fff transparent transparent transparent;
+        }
 
-/* Floating animation */
-@keyframes float {
-  0%, 100% { transform: translate(-50%, -100%) translateY(0); }
-  50% { transform: translate(-50%, -100%) translateY(-6px); }
-}
+        /* Floating animation */
+        @keyframes float {
 
-/* Pulse animation */
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-  100% { transform: scale(1); }
-}
+            0%,
+            100% {
+                transform: translate(-50%, -100%) translateY(0);
+            }
 
-/* SECTION */
-.areas-covered {
-  overflow: hidden;
-}
+            50% {
+                transform: translate(-50%, -100%) translateY(-6px);
+            }
+        }
 
-/* MAP */
-.map-container {
-  position: relative;
-}
+        /* Pulse animation */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
 
-.map-container img {
-  border-radius: 10px;
-}
+            50% {
+                transform: scale(1.2);
+            }
 
-/* 🎯 MAP PINS UPDATED */
+            100% {
+                transform: scale(1);
+            }
+        }
 
-/* 🎯 INDIVIDUAL POSITION FIXES */
+        /* SECTION */
+        .areas-covered {
+            overflow: hidden;
+        }
 
-/* Manchester */
-.pin1 span {
-  left: 50%;
-  transform: translateX(-50%);
-}
+        /* MAP */
+        .map-container {
+            position: relative;
+        }
 
-/* Prestwich */
-.pin2 span {
-  left: 0;
-  transform: translateX(-20%);
-}
+        .map-container img {
+            border-radius: 10px;
+        }
 
-/* Whitefield */
-.pin3 span {
-  left: 100%;
-  transform: translateX(-80%);
-}
+        /* 🎯 MAP PINS UPDATED */
 
-/* Salford */
-.pin4 span {
-  left: 50%;
-  transform: translateX(-50%);
-}
+        /* 🎯 INDIVIDUAL POSITION FIXES */
 
-/* Broughton Park */
-.pin5 span {
-  left: 100%;
-  transform: translateX(-70%);
-}
+        /* Manchester */
+        .pin1 span {
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
-/* Crumpsall */
-.pin6 span {
-  left: 0;
-  transform: translateX(-10%);
-}
-/* 🎯 INDIVIDUAL POSITION FIXES REMOVED - COORDINATES UPDATED IN HTML */
+        /* Prestwich */
+        .pin2 span {
+            left: 0;
+            transform: translateX(-20%);
+        }
+
+        /* Whitefield */
+        .pin3 span {
+            left: 100%;
+            transform: translateX(-80%);
+        }
+
+        /* Salford */
+        .pin4 span {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Broughton Park */
+        .pin5 span {
+            left: 100%;
+            transform: translateX(-70%);
+        }
+
+        /* Crumpsall */
+        .pin6 span {
+            left: 0;
+            transform: translateX(-10%);
+        }
+
+        /* 🎯 INDIVIDUAL POSITION FIXES REMOVED - COORDINATES UPDATED IN HTML */
     </style>
 </head>
 
@@ -286,20 +305,20 @@
             </header>
             <div class="row align-items-center justify-content-between">
                 <!-- Text Section -->
-               <div class="col-lg-6 text-white" style="position: relative; z-index: 2;">
-                <h5 class="text-uppercase font-weight-bold">24/7 Expert Care</h5>
-                <h1 class="">
-                    G-Tec – Your Local Heating Repairs Manchester Specialist!
-                </h1>
-                <p class="lead" style="color: white; font-weight: 400">
-                    Fast, reliable, and expert heating repairs across Manchester. We specialize in fixing boilers, 
-                    radiators, and full heating systems to get your home back to its best.
-                </p>
-                <div class="d-flex gap-3">
-                    <a href="tel:+447843277711" class="btn btn-warning btn-lg mt-4">07843 277 711</a>
-                    <a href="tel:+441617925446" class="btn btn-warning btn-lg mt-4">0161 792 5446</a>
+                <div class="col-lg-6 text-white" style="position: relative; z-index: 2;">
+                    <h5 class="text-uppercase font-weight-bold">24/7 Expert Care</h5>
+                    <h1 class="">
+                        G-Tec – Your Local Heating Repairs Manchester Specialist!
+                    </h1>
+                    <p class="lead" style="color: white; font-weight: 400">
+                        Fast, reliable, and expert heating repairs across Manchester. We specialize in fixing boilers,
+                        radiators, and full heating systems to get your home back to its best.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="tel:+447843277711" class="btn btn-warning btn-lg mt-4">07843 277 711</a>
+                        <a href="tel:+441617925446" class="btn btn-warning btn-lg mt-4">0161 792 5446</a>
+                    </div>
                 </div>
-            </div>
 
                 <!-- Form with Image -->
                 <div class="col-lg-4 bannRow_2" style="position: relative; z-index: 2;">
@@ -327,7 +346,7 @@
     </section>
 
 
-     <section class="chosSec position-relative">
+    <section class="chosSec position-relative">
         <div class="container-fluid">
             <div class="chosHead">
                 <h2>Why Choose Us ?</h2>
@@ -378,7 +397,7 @@
 
     <!---Brands -->
 
-    
+
     <div class="brand-strip py-5" style="background-color: #eaeaea;">
         <div class="container">
 
@@ -399,7 +418,8 @@
                         </h3>
 
                         <p class="text-muted">
-                            We provide reliable and professional heating repair and maintenance for homes and businesses.
+                            We provide reliable and professional heating repair and maintenance for homes and
+                            businesses.
                         </p>
 
                         <ul class="list-unstyled mb-3">
@@ -433,7 +453,7 @@
         </div>
     </div>
 
-      <section class="brandSec py-4">
+    <section class="brandSec py-4">
         <div class="container">
             <div class="bkHead bkHead_1 text-center">
                 <h2 class="fw-bold">We work on all brands</h2>
@@ -564,7 +584,8 @@
                         <h5>Boiler & Heating Repair</h5>
 
                         <p>
-                            Expert boiler and heating repair services across Manchester. Our specialists diagnose and fix 
+                            Expert boiler and heating repair services across Manchester. Our specialists diagnose and
+                            fix
                             all system issues efficiently to keep your home warm and safe.
                         </p>
                         <a href="#forQuotebann" style="text-decoration: none;"><button>Book Now</button></a>
@@ -673,7 +694,7 @@
 
     <!-- 5th sec  -->
 
-   
+
     <section class="brands-section1 py-5">
         <div class="container1">
             <div class="brands-wrapper1" style="display: flex; justify-content: center">
@@ -704,75 +725,76 @@
         </div>
     </section>
     <!-- Areas We Cover Section -->
-     <section class="areas-covered py-5 bg-white">
-    <div class="container">
-        <div class="row align-items-center">
+    <section class="areas-covered py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center">
 
-            <!-- LEFT SIDE MAP -->
-            <div class="col-lg-6 mb-4 mb-lg-0">
-                <div class="map-container">
+                <!-- LEFT SIDE MAP -->
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="map-container">
 
-                    <img src="images/map.jpg" class="img-fluid w-100" alt="Map">
+                        <img src="images/map.jpg" class="img-fluid w-100" alt="Map">
 
-                    <!-- Pins -->
-                    <div class="map-pin pin1" style="top:65%; left:63%;">
-    <i class="fa-solid fa-location-dot"></i>
-    <span>City Centre</span>
-</div>
+                        <!-- Pins -->
+                        <div class="map-pin pin1" style="top:65%; left:63%;">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>City Centre</span>
+                        </div>
 
-<div class="map-pin pin2" style="top:32%; left:51%;">
-    <i class="fa-solid fa-location-dot"></i>
-    <span>Prestwich</span>
-</div>
+                        <div class="map-pin pin2" style="top:32%; left:51%;">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Prestwich</span>
+                        </div>
 
-<div class="map-pin pin3" style="top:17%; left:52%;">
-    <i class="fa-solid fa-location-dot"></i>
-    <span>Whitefield</span>
-</div>
+                        <div class="map-pin pin3" style="top:17%; left:52%;">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Whitefield</span>
+                        </div>
 
-<div class="map-pin pin4" style="top:55%; left:40%;">
-    <i class="fa-solid fa-location-dot"></i>
-    <span>Salford</span>
-</div>
+                        <div class="map-pin pin4" style="top:55%; left:40%;">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Salford</span>
+                        </div>
 
-<div class="map-pin pin5" style="top:45%; left:50%;">
-    <i class="fa-solid fa-location-dot"></i>
-    <span>Broughton Park</span>
-</div>
+                        <div class="map-pin pin5" style="top:45%; left:50%;">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Broughton Park</span>
+                        </div>
 
-<div class="map-pin pin6" style="top:38%; left:60%;">
-    <i class="fa-solid fa-location-dot"></i>
-    <span>Crumpsall</span>
-</div>
+                        <div class="map-pin pin6" style="top:38%; left:60%;">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Crumpsall</span>
+                        </div>
 
-                </div>
-            </div>
-
-            <!-- RIGHT SIDE CONTENT -->
-            <div class="col-lg-6">
-                <div class="mb-4">
-                    <h2>
-                        Areas We <span class="text-orange">Serve</span>
-                    </h2>
-                    <p class="text-muted">
-                        We provide professional plumbing and heating services across <span style="font-weight:bold ; color:#FF5722">Manchester</span>  and surrounding areas.
-                    </p>
+                    </div>
                 </div>
 
-                <ul class="area-list list-unstyled">
-                    <li><i class="fa-solid fa-check"></i>  City Centre</li>
-                    <li><i class="fa-solid fa-check"></i> Prestwich</li>
-                    <li><i class="fa-solid fa-check"></i> Whitefield</li>
-                    <li><i class="fa-solid fa-check"></i> Broughton Park</li>
-                    <li><i class="fa-solid fa-check"></i> Crumpsall</li>
-                    <li><i class="fa-solid fa-check"></i> Salford</li>
-                </ul>
+                <!-- RIGHT SIDE CONTENT -->
+                <div class="col-lg-6">
+                    <div class="mb-4">
+                        <h2>
+                            Areas We <span class="text-orange">Serve</span>
+                        </h2>
+                        <p class="text-muted">
+                            We provide professional plumbing and heating services across <span
+                                style="font-weight:bold ; color:#FF5722">Manchester</span> and surrounding areas.
+                        </p>
+                    </div>
+
+                    <ul class="area-list list-unstyled">
+                        <li><i class="fa-solid fa-check"></i> City Centre</li>
+                        <li><i class="fa-solid fa-check"></i> Prestwich</li>
+                        <li><i class="fa-solid fa-check"></i> Whitefield</li>
+                        <li><i class="fa-solid fa-check"></i> Broughton Park</li>
+                        <li><i class="fa-solid fa-check"></i> Crumpsall</li>
+                        <li><i class="fa-solid fa-check"></i> Salford</li>
+                    </ul>
+
+                </div>
 
             </div>
-
         </div>
-    </div>
-</section>
+    </section>
 
     <!--******** Footer ************-->
 
